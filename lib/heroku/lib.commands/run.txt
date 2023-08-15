@@ -1,0 +1,2 @@
+Comando para enviar um loaddata para o heroku
+  $ heroku run python manage.py loaddata 'name do json'.json

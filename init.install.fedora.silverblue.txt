@@ -1,0 +1,52 @@
+- wallpaper
+
+- flathub - flathub.or/home
+- nightly - wiki.gnome.org/Apps/Nightly
+
+flatpak
+  i guess so not need to install
+    - gnome calculator
+    - gnome-fonts
+
+  - libreoffice
+  - peek
+  - pulseaudio
+  - qBittorrent
+  - skype
+  - slack
+  - spotify
+  - steam
+  - telegram
+  - vim
+  - visualstudio
+  - vlc
+  - zeal
+  - zoom
+  - atom
+  - dconf-editor
+  - discord
+  - mediawriter
+  - eyes of gnome
+  - gimp
+
+toolbox(need to create .desktop)
+  - htop($ toolbox run -c htop htop)
+
+gnome shell
+  - trash
+  - sound input & output device chooser
+  - topicons Plus
+
+rpm-ostree($ rpm-ostree upgrade --install program)
+  - gnome-tweak-tool
+  - gnome-pomodoro
+
+Keyboard.config
+
+i couldn't install
+  - powerline-fonts
+  https://discussion.fedoraproject.org/t/adding-h-264-support-to-firefox/1005/14
+  https://ask.fedoraproject.org/t/how-to-change-the-default-shell-on-fedora-silverblue-chsh-is-not-available/2407
+  https://discussion.fedoraproject.org/t/first-impressions-of-fedora-silverblue-30-coming-from-workstation/2037
+
+easySSH

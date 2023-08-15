@@ -1,0 +1,4 @@
+$ sudo systemctl –now mask packagekit.service
+$ sudo rm -rf /var/cache/PackageKit
+$ sudo systemctl –now mask packagekit-offline-update.service
+$ sudo gsettings set org.gnome.software download-updates false

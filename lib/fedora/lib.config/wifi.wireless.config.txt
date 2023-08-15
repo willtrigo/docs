@@ -1,0 +1,3 @@
+$ sudo dnf install ndiswrapper
+$ sudo dnf install kmod-ndiswrapper
+$ reboot

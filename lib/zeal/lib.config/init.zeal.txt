@@ -1,0 +1,11 @@
+Install Zeal
+  $ sudo dnf install zeal
+
+add packages
+  Bootstrap 4
+  Django
+  Docker
+  Font awesome
+  Python 2
+  Python 3
+  JQuery

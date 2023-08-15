@@ -1,0 +1,15 @@
+install ds4drv
+  $ sudo pip install ds4drv
+
+copy rules files in https://github.com/chrippa/ds4drv
+  $ cd /etc/udev/rules.d/
+  $ wget https://github.com/chrippa/ds4drv/blob/master/udev/50-ds4drv.rules
+  $ sudo udevadm control --reload-rules
+  $ sudo udevadm trigger
+
+steam > settings > controller settings > playstation configuration support
+
+in the game enable controller
+
+$ sudo ds4drv --hidraw
+and plug the controller

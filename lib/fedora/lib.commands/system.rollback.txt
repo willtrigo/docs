@@ -1,0 +1,5 @@
+to see where i should go
+  $ sudo dnf history list | head -10
+
+rollback
+  $ sudo dnf history redo 'xxxx'

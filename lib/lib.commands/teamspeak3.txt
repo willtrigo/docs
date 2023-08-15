@@ -1,0 +1,19 @@
+Baixar o novo cliente do teamspeak3
+  https://www.teamspeak.com/downloads.html
+
+Descompactar a pasta
+  chmod +x "caminho do arquivo"
+
+pelo terminal rodar o .run, com isso no final será criado uma pasta com o programa do teamspeak3
+
+mover a pasta pelo terminal
+  sudo mv ~/Downloads/'versão do teamspeak'/ /opt/
+
+baixar um ico do teamspeak ou copiar do antigo
+
+Atualizar com vim o arquivo de atalho
+  sudo vim ~/Desktop/teamspeak\ 3.desktop
+  cp ~/Desktop/teamspeak\ 3.desktop /usr/share/applications/teamspeak\ 3.desktop
+
+Remover ultimo instalado
+  sudo rm -rf /opt/'pasta antiga do teamspeak'

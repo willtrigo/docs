@@ -1,0 +1,101 @@
+https://github.com/nvie/gitflow/wiki/Installation
+-----------------------------------------------------------------------------
+CONFIG GIT FLOW--------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Para iniciar o git na pasta, precisa abrir o terminal e acessar a pasta e
+    git flow init
+
+-----------------------------------------------------------------------------
+FEATURE----------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Criando uma nova feature
+    git flow feature start "nome da feature"
+
+  ---------------------------------------------------------------------------
+  Finalizando uma feature
+    git flow feature finish "nome da feature"
+
+  ---------------------------------------------------------------------------
+  Publicando uma feature
+    git flow feature publish "nome da feature"
+
+  ---------------------------------------------------------------------------
+  Baixar uma feature do repositório central
+    git flow feature track "nome da feature"
+
+  ---------------------------------------------------------------------------
+  Atualizar as features
+    git flow feature pull
+
+  ---------------------------------------------------------------------------
+  Listar somente feature
+    git flow feature list
+
+  ---------------------------------------------------------------------------
+  Mudar para uma feature especifica
+    git flow feature checkout "nome da feature"
+
+-----------------------------------------------------------------------------
+RELEASE----------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Criando uma nova release
+    git flow release start 0.0.1
+
+  ---------------------------------------------------------------------------
+  Finalizando uma release
+    git flow release finish 0.0.1
+  OBS.: Descrever muito bem o que tem na release
+
+  ---------------------------------------------------------------------------
+  Publicando uma release
+    git checkout master
+    git push origin 0.0.1
+
+-----------------------------------------------------------------------------
+HOTFIX-----------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Para arrumar um erro de produção deve ser criado um hotfix
+    git flow hotfix start 0.0.2
+  OBS.: A númeração deve ser sempre maior do que a tag atual
+
+  ---------------------------------------------------------------------------
+  Finalizando uma hotfix
+    git flow hotfix finish 0.0.2
+  OBS.: Descrever muito bem o que tem na hotfix
+
+  ---------------------------------------------------------------------------
+  Publicando uma release
+    git checkout master
+    git push origin 0.0.2
+
+-----------------------------------------------------------------------------
+BUGFIX-----------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Para arrumar um erro do develop deve ser criado um bugfix
+    git flow bugfix start "nome do bug"
+
+  ---------------------------------------------------------------------------
+  Finalizando uma hotfix
+    git flow bugfix finish "nome do bug"
+
+  ---------------------------------------------------------------------------
+  Publicando uma bugfix
+    git flow bugfix publish "nome da bug"
+
+  ---------------------------------------------------------------------------
+  Baixar uma bugfix do repositório central
+    git flow bugfix track "nome da bug"
+
+
+-----------------------------------------------------------------------------
+ATUALIZAR O MASTER-----------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Caso o develop esteja atualizado e necessite atualizar o master para entrar em produção
+    git checkout master
+    git merge develop

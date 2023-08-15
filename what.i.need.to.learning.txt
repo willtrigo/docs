@@ -1,0 +1,261 @@
+web:
+  -HTML5
+  CSS
+    -Flexbox
+    -Sass
+    -Foundation(Framework)
+    -Pure CSS
+    -Metodologia B.E.M.
+    -Bootstrap(framework)
+  PHP
+    -Laravel(framework)
+  or
+  Node.js
+
+  PHP
+    -magento(framework)
+    -yii(framework)
+    -drupal(framework)
+    -Symfony(framework)
+    -Zend(framework)
+    -CakePHP(framework)
+    -CodeIgniter(framework)
+    -Silex(framework)
+    -SlimPHP
+    -Composer
+    WordPress
+      -ReduxFramework
+  SQL
+    -MySQL
+    -NoSQL
+    www.sqlcourse.com
+    www.sqlcourse2.com
+    codeacademy
+    www.sqlinjectionwiki.com
+  -GO
+  JavaScript
+    Framework
+      -Angular
+      -React
+      -Ember
+      -Aurelia
+      -Vue.js
+      -Cycle.js
+      -Backbone
+    -Meteor
+    -Jquery(Library)
+    -Gulp(toolkit)
+    -Grunt(toolkit)
+    -AJAX
+    -Ionic(mobile app framework)
+    https://github.com/ScottLogic/insight para graficos
+  UX
+    -Zeplin
+    https://medium.com/ux-power-tools/the-ux-designers-best-companions-for-sketch-2d6cd3c10534
+
+  -Apache Cordova
+  Ruby
+    -Less
+    -Vagrant
+  Python
+    -Django(framework)
+    -Jinja2
+    -Celery
+    -Kivy
+    -pyterrier https://github.com/dfurtado/pyterrier
+    -Pytorch(lib machine learning)
+    *TensorFlow(lib)
+    *Scrapy(lib) para montar robos para extração de conteúdo
+    *pygame(lib) para criação de games
+    *Scikit-learn(lib)
+    *OpenAL universe(lib)
+    *Zappa(lib)
+    *Arrow(lib)
+    *Theano(lib)
+    -GraphQL API (graphene)
+    -pypy
+    -jython(usado pelo que eu vi junto ou similar a java)
+    -mock(lib para test algo do tipo)
+    Machine learning https://campus.datacamp.com
+    https://www.toptal.com/python#hiring-guide
+  LUA
+
+  *nao sei como usar
+    -bower
+    https://electron.atom.io/ - creating desktop app
+    -scratch(possivel usar isso para criar jogos via browser)
+    -Scrum
+    -Kanban
+    -Node.js
+    -API RESTful
+    -API SOAP
+    -ES6
+    -RabbitMQ
+    -Gearman
+    -Opencart
+    npm
+      Redux
+    -c++
+      with http://crossbridge.io/
+------------------------------------------------------
+------------------------------------------------------
+repositores:
+  -Git
+    Giteye
+  -TFS
+------------------------------------------------------
+------------------------------------------------------
+desenvolvimento:
+  -Java
+    javaFX - aplicação desktop
+  -BD Oracle(PL/SQL)
+------------------------------------------------------
+------------------------------------------------------
+c
+c++
+assembly
+pyhton
+
+
+quanto de valor é disponivel para o meu trabalho, quanto de valor eu tenho que produzir para atingir tal valor
+
+http://agencia.quatrodigital.com.br/
+possivel trabalho
+https://trampos.co/oportunidades/131404
+
+1) code every day
+2) code for 25 min then take a 5 min break(use the pomodoro timer)
+3) hang out with other people who code
+
+------------------------------------------------------
+------------------------------------------------------
+
+USE
+html5
+django  - python
+https://three29.com/best-css-frameworks-2017/
+bulma - css
+sqlite - bd
+https://tutorial.djangogirls.org/en/deploy
+
+AWS
+  ses para envio de email pelo amazon
+  http://docs.aws.amazon.com/ses/latest/DeveloperGuide/sending-email.html
+  olhar o cache configurações e tudo mais
+Heroku
+Google App Engine
+Pythonanywhere
+Webfaction
+https://www.webhostingsecretrevealed.net/web-hosting-beginner-guide/
+
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+
+onde aprender a programar
+  codeacademy
+  https://www.packtpub.com/ books free
+  documentação da própria linguagem
+  code.org
+
+o que aperfeiçar primeiro
+  tipos de classes e objetos
+  tomada de decisão
+  loops e interação dentro de objetos
+  herança e polimorfismo
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+
+Chess.com Senior Java Developer
+Want to see your code used by millions of passionate users? Chess.com is looking for a Senior Java Developer who takes pride in writing high-quality, high-performance code, and enjoys working with a team of awesome developers. We have served more than two BILLION chess games, and we need you to help take us to 10 billion and beyond.
+This is a full-time, permanent, remote work opportunity.
+
+- Java 8 (core, concurrency, multithreading)
+- MySQL, Database Persistance (iBATIS, etc)
+- Networking (TCP/IP, HTTP, WebSocket)
+- Project Management Skills
+- Hazelcast (not required, but bonus!)
+- Jetty (not required, but bonus!)
+- Cometd (not required, but bonus!)
+- Linux (not required, but bonus!)
+- JavaScript (not required, bonus!)
+- Redis (not required, but bonus!)
+
+* Required
+What is your Chess.com username? *
+
+Your answer
+What is your email address? *
+
+Your answer
+What country do you live in? (ALL countries are acceptable, this just helps us get to know you!) *
+
+Your answer
+What is your GitHub username? *
+
+Your answer
+Tell us about your relevant Java experience and how it can apply to Chess.com. *
+Your answer
+
+Please tell us about your experience working in teams, any management, etc. *
+Your answer
+
+Please paste in your resume (or link to). *
+Your answer
+
+What would YOU like to be working on? *
+Your answer
+
+What questions do you have for us?
+
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+Chess Engine Developer
+Do you love chess, programming, and artificial intelligence? Chess.com is looking to add a new member to our chess engine team. This role requires a strong background in programming and chess engines. We are working on some new projects that are pushing chess engines to new limits.
+- C / C++
+- Deep experience with chess engines / evaluation
+- Shell scripting, Perl, SQL, YAML, XML, Github
+- Automated testing (bonus, not required)
+- JavaScript / Node.js (bonus, not required)
+- Amazon AWS (bonus, not required)
+
+We have exciting plans for the future, and we look forward to meeting you to determine if it’s a good fit! This is a 100% remote position. We are open to part-time and full-time positions.
+
+* Required
+What is your name? *
+
+Your answer
+What is your email address? *
+
+Your answer
+What is your Chess.com username?
+
+Your answer
+What country do you live in? (ALL countries are acceptable, this just helps us get to know you!) *
+
+Your answer
+What would you like to be working on at the intersection of chess and programming? *
+Your answer
+
+Please paste in the relevant areas of your resume (programming and chess related). *
+Your answer
+
+What questions do you have for us?
+
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+-----------------------------------------------------
+
+SCRAPER WEBSITES
+
+- python
+  - BeautifulSoup4(lib)
+  - scrapy(framework)
+
+Facebook Graph API in django

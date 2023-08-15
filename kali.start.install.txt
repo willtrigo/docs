@@ -1,0 +1,16 @@
+debian 64
+3072MB
+2 processors
+102MB
+60GB
+
+apt-get update
+apt-get install virtualbox-guest-x11 -y
+reboot
+
+talvez
+https://www.youtube.com/watch?v=m0Xo4qweGco
+https://www.youtube.com/watch?v=JPTzVcBYVE8
+
+instalar o vlc
+https://www.youtube.com/watch?v=T4tqz9jgmVk

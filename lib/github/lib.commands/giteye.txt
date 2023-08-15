@@ -1,0 +1,31 @@
+Baixar o novo cliente do GitEye
+  https://www.collab.net/downloads/giteye
+
+Descompactar a pasta
+
+Mudar a permissão da pasta para melhor funcionamento do programa
+  sudo chown -R willtrigo:willtrigo ~/Downloads/"GitEye atualizado"
+
+mover a pasta pelo terminal
+  sudo mv Downloads/"GitEye atualizado" /opt
+
+cria um link simbolo
+  sudo ln -s /opt/"GitEye atualizado"/GitEye /usr/local/bin/GitEye
+
+Atualizar com vim o arquivo de atalho
+  sudo vim /usr/share/applications/GitEye.desktop
+
+Dentro do arquivo atualizar somente o caminho fechar e salvar
+  :wq!
+
+Remover ultimo instalado
+  sudo rm -rf /opt/'pasta antigo do GitEye'
+
+Caso não tenha o GitEye.desktop
+
+[Desktop Entry]
+Name=GitEye
+Exec=GitEye
+Icon=/opt/GitEye-2.0.0-linux.x86_64/GitEye.ico
+Type=Application
+Categories=Application;Other;

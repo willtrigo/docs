@@ -1,0 +1,382 @@
+Format pendrive
+
+  Open "Disk Utility", and look for your device, and click on it. This will let you be sure you know the correct filesystem type and device name for it. In my case, it was 'ext4' and '/dev/sdb1' respectively. Next: Decide what you want to call your thumb drive. I called mine 'USB16-C', but you choose your own name. Before closing Disk Utility, click unmount. And USER should be your login name.
+
+  Then run steps 2 to 4 in a terminal window.
+    $ sudo mkdir -p /media/USB16-C
+    $ sudo mount -t ext4 -o rw /dev/sdb1 /media/USB16-C
+    $ sudo chown -R USER:USER /media/USB16-C
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+Help
+
+  Obter informações sobre o comando
+    $ "comando" --help
+    $ man "comando"
+    $ info "comando"
+
+-----------------------------------------------------------------------------
+GERENCIAR ARQUIVOS-----------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  LS
+
+    Listar os conteudos da pasta
+      $ ls
+
+    Listar os arquivos por data
+      $ ls -t
+
+    Lista todos os conteudos até os ocultos
+      $ ls -la
+
+    Listar um arquivo especifico
+      $ ls -la "nome do arquivo"
+
+  ---------------------------------------------------------------------------
+  MKDIR
+
+    Para criar uma pasta
+      $ mkdir "nome da pasta"
+    OU
+      $ mkdir "caminho"/"nome da pasta"
+
+  ---------------------------------------------------------------------------
+  WATCH
+
+    Para automatizar um comando que precise ser utilizado
+      $ watch "comando"
+    para ser preciso
+      $ watch -p "comando"
+    para mudar a variação do tempo em milisegundos 0.1
+      $ watch -n 1 "comando"
+
+  ---------------------------------------------------------------------------
+  TOUCH
+
+    Mudar a data do arquivo
+      $ touch "nome do arquivo"
+
+  ---------------------------------------------------------------------------
+  RM
+
+    Força a remoção de um arquivo
+      $ rm -f "nome do arquivo"
+
+    Forçar a remoção de um pasta com subpastas
+      $ rm -rf "nome da pasta"
+
+  ---------------------------------------------------------------------------
+  LN (cria links de arquivo) *precisa ser o caminho completo
+
+    Ele cria um arquivo que não existe mas que é refencia do arquivo linkado
+      $ ln "nome do arquivo" "novo nome"
+      $ ln "nome do arquivo" "caminho"
+
+    Mesma coisa so que simbolico
+      $ ln -s "nome do arquivo" "novo nome"
+      $ ln -s "nome do arquivo" "caminho"
+
+  ---------------------------------------------------------------------------
+  STAT (mostra as informaçoes do arquivo)
+
+    Para mostrar as informações do arquivo
+      $ stat "nome do arquivo"
+
+  ---------------------------------------------------------------------------
+  CP
+
+    Copiar um arquivo
+      $ cp "nome do arquivo" "outro nome para o arquivo"
+      $ cp "nome do arquivo" "caminho novo"
+
+    Copiar um diretorio
+      $ cp -r "nome do diretorio" "nome do novo diretorio"
+      $ cp -r "nome do diretorio" "caminho novo"
+
+  ---------------------------------------------------------------------------
+  MV (renomeia ou mover para outra pasta)
+
+    Somente renomeia
+      $ mv "nome do arquivo" "novo nome"
+
+    Mover o arquivo para outro diretorio
+      $ mv "nome do arquivo" "caminho"
+
+  ---------------------------------------------------------------------------
+  FIND
+
+    Procura diretorio
+      $ find "nome do diretorio"
+
+    Procurar arquivo/s em um diretorio
+      $ find "caminho do diretorio" -name "nome do arquivo"
+      $ find "caminho do diretorio" -name \*.txt
+      $ find "caminho do diretorio" -name '*.txt'
+
+    Busca por tipo de arquivo
+      $ find "caminho" -type f -name \*.txt
+      $ find "caminho" -type f -name '*.txt'
+
+    Buscar por somente pastas
+      $ find "caminho" -type d
+
+    Buscar um comando já usado
+      Crtl+r
+
+  ---------------------------------------------------------------------------
+  CAT
+
+    Jogar o conteudo de um arquivo no terminal
+      $ cat "nome do arquivo"
+
+  ---------------------------------------------------------------------------
+  > (criando arquivo com base em algum comando)
+
+    Alguns terminais precisam do :> para gerar o arquivo sem prender o terminal
+      $ :> "nome do arquivo"
+
+    Joga o conteudo de algum processo em um arquivo, em modo destrutivo(ele apaga todo o conteudo presente no arquivo se ele já existir)
+      $ "comando" > "nome do arquivo"
+
+    Joga o conteudo de algum processo em um arquivo, em modo não destrutivo(ele adiconar conteudo no final do arquivo)
+      $ "comando" >> "nome do arquivo"
+
+    Para jogar somente os erros do comando
+      $ "comando" 2> "nome do arquivo"
+      $ "comando" 2>> "nome do arquivo"
+
+    Para jogar os conteudos e os erros
+      $ "comando" &> "nome do arquivo"
+      $ "comando" &>> "nome do arquivo"
+
+    Tapar uma saida do conteudo desejado tanto erro quanto conteudo valido
+      $ "comando" "número do cano que voce deseja tapar 1 ou 2">&-
+
+    Jogar o conteudo no buraco negro(só funciona em ambientes linux ou unix)
+      $ "comando" > /dev/null
+
+  ---------------------------------------------------------------------------
+  GREP
+
+    Procurar por um determinado termo
+      $ "comando" | grep "termo"
+
+  ---------------------------------------------------------------------------
+  Variaveis do bash
+
+    Visualisar todas as variaveis que são herdadas do sistema
+      $ env
+
+    Se eu quiser um comando com uma variavel diferente
+      $ "VARIAVEL"="valor dela" "comando"
+
+  ---------------------------------------------------------------------------
+  \
+
+    Usado para não expandir um caracter especial
+      $ echo \~
+    OU
+      $ echo '~'
+
+  ---------------------------------------------------------------------------
+  $? (para saber se tudo ocorreu bem - retornado 0 está ok)
+
+    Para fazer a pesquisa na man depois do resultado para saber qual foi o erro
+      vc faz o comando e depois
+      $ echo $?
+
+    http://tldp.org/LDP/abs/html/exitcodes.html#EXITCODESREF
+
+  ---------------------------------------------------------------------------
+  ; (comando em seguencia)
+
+    $ "comando" ; "comando"
+
+  ---------------------------------------------------------------------------
+  || (condiciona os comandos)
+
+    Se o primeiro não funcionar ele pula para o proximo
+      $ "comando" || "comando"
+
+  ---------------------------------------------------------------------------
+  && (condiciona os comandos)
+
+    Se o primeiro funcionar ele executa o proximo comando
+      $ "comando" && "comando"
+
+  ---------------------------------------------------------------------------
+  Job
+
+    Listar os jobs
+      $ jobs
+
+    Parar um processo
+      ctrl+z
+
+    Descongelar e colocar em primeiro plano
+      $ fg
+      $ fg "número do job"
+
+    Descongelar e colocar em segundo plano
+      $ bg
+      $ bg "número do job"
+
+    Jogando o processo no bg ele ganha um número de job
+      $ "comando" &
+
+-----------------------------------------------------------------------------
+PROCESSAR TEXTO--------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  TAC(inverte a ordem do conteudo)
+
+    $ tac "nome do arquivo"
+    $ "comando" | tac
+
+  ---------------------------------------------------------------------------
+  TEE(salva em um arquivo mas também joga o resultado no terminal)
+
+    $ "comando" | tee "nome do arquivo"
+
+  ---------------------------------------------------------------------------
+  CUT(recortar o texto de um padrão especifico)
+
+    $ "comando" | cut d"delimitador ex.: ;" -f"posição que voce deseja pegar ex.: 2"
+
+  ---------------------------------------------------------------------------
+  TAIL(lista as 10 ultimas linhas do conteúdo)
+
+    Para buscar somente as 10 ultimas
+      $ "comando" | tail
+      $ tail "nome do arquivo"
+
+    Para buscar um numero de linhas especifico
+      $ tail -n"número de linhas" "nome do arquivo"
+      $ "comando" | tail -n"número de linhas"
+
+  ---------------------------------------------------------------------------
+  HEAD(lista as 10 primeiras linhas do conteúdo)
+
+    Para buscar somente as 10 primeiras
+      $ "comando" | head
+      $ head "nome do arquivo"
+
+    Para buscar um numero de linhas especifico
+      $ head -n"número de linhas" "nome do arquivo"
+      $ "comando" | head -n"número de linhas"
+
+  ---------------------------------------------------------------------------
+  LESS(formata por pagina)
+
+    $ "comando" | less
+
+  ---------------------------------------------------------------------------
+  WC(conta a quantidade de linhas, palavras ou caracteres)
+
+    Para contar linhas
+      $ "comando" | wc -l
+
+    Para contar linhas, palavras e caracteres
+      $ "comando" | wc
+
+  ---------------------------------------------------------------------------
+  SORT(ordena o conteudo)
+
+    Ordernar por ordem alfabetica
+      $ "comando" | sort
+
+    Remover entradas duplicadas
+      $ sort -u "nome do arquivo"
+
+-----------------------------------------------------------------------------
+ADMINISTRAR SISTEMA----------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  PWD
+
+    Para saber qual caminho vc está na pasta
+      $ pwd
+
+  ---------------------------------------------------------------------------
+  TIME(para saber qual a duração do comando utilizado)
+
+    $ time "comando"
+
+  ---------------------------------------------------------------------------
+  WHO(mostra quanto terminais estão abertos)
+
+    $ who -a
+
+  ---------------------------------------------------------------------------
+  SYSTEMD-ANALYZE
+
+    Para saber quais serviços estão inicializando no boot
+      $ systemd-analyze blame
+
+  ---------------------------------------------------------------------------
+  SYSTEMCTL(Controlar os serviços do pc)
+
+    Para parar um serviço
+      $ sudo systemctl stop nome-do-serviço.service
+
+    Para desabilitar um serviço (serviço linkado no boot)
+      $ sudo systemctl disable nome-do-serviço.service
+
+    Para iniciar um serviço
+      $ sudo systemctl start nome-do-serviço.service
+
+    Para habilitar um serviço (serviço linkado no boot)
+      $ sudo systemctl enable nome-do-serviço.service
+
+    O mask cria um link da unit file para o /dev/null, impossibilitando de iniciar automática ou manualmente
+      Para mascarar um serviço (serviço linkado no boot)
+        $ sudo systemctl enable nome-do-serviço.service
+
+      Para desmascarar um serviço (serviço linkado no boot)
+        $ sudo systemctl enable nome-do-serviço.service
+
+  ---------------------------------------------------------------------------
+  WHOAMI(para saber quem eu sou)
+
+    $ whoami
+
+-----------------------------------------------------------------------------
+GERENCIAR ESPAÇO-------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  DU
+
+    Para saber quanto espaço está sendo utilizado
+      $ du -sm "caminho da pasta"
+
+  ---------------------------------------------------------------------------
+  DF
+
+    Para saber quanto de espaço tempo no sistema
+      $ df -m
+
+  ---------------------------------------------------------------------------
+  SWAPOFF/SWAPON
+
+    Para limpar o cache do swap
+      $ sudo swapoff -a
+      $ sudo swapon -a
+
+-----------------------------------------------------------------------------
+GERENCIAR REDE---------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  IFCONFIG
+
+    Lista todas as interfaces ativas e informações
+      $ ifconfig
+      $ ifconfig -a
+
+  ---------------------------------------------------------------------------
+  WGET
+
+  Faz o download de algo na internet
+    $ wget "caminho do site

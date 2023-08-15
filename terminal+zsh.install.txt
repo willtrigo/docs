@@ -1,0 +1,225 @@
+$ sudo dnf install zsh
+
+verify which bash is set
+  $ echo $0
+
+take tehe path of the zsh
+  $ which zsh
+
+install chsh
+  $ sudo dnf install util-linux-user
+
+$ sudo chsh -s $(which zsh)
+
+acessar o site ohmyz.sh
+pegar o link de instalação do oh-my-zsh
+
+instalar no terminal
+reboot
+
+Para instalar no android
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/fornwall/oh-my-zsh/etc-shells-may-not-exist/tools/install.sh)"
+
+ precisa do tsu tambem
+ apt install tsu
+And then you can run tsu so that your bash and everything is now under root privilege.
+
+Further information:
+Use an editor (like vim) to see /data/data/com.termux/files/usr/bin/su and you'll find that at line 10, it calls exec su $@ directly while in tsu, it performs shell detection and at line 80, it runs
+
+exec su --preserve-environment -c "LD_LIBRARY_PATH=$PREFIX/lib $ROOT_SHELL"
+ hacker's keyboard
+ termux
+
+vim .zshrc
+alterar o atributo ZSH_THEME="robbyrussel"
+para ZSH_THEME="geoffgarside"
+
+ln -s /home/my_user_name/.oh-my-zsh /root/.oh-my-zsh
+ln -s /home/my_user_name/.zshrc /root/.zshrc
+caso o segundo ln não funcionar substituir direto no root o arquivo .zshrc
+# cp /home/my_user_name/.zshrc /root/.zshrc
+
+depois
+printf "$(heroku autocomplete:script zsh)" >> ~/.zshrc; source ~/.zshrc
+
+nas preferencias do terminal selecionar a fonte "inconsolata for powerline bold" com a fonte 14
+na parte da fonte ainda
+Profile name: W!££
+--------------------------------------------------------------------------
+
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+ZSH_DISABLE_COMPFIX=true
+COMPLETION_WAITING_DOTS="true"
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+setopt RM_STAR_WAIT
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=~/workspace/projects
+export PROJECT_HOME=$WORKON_HOME
+source /usr/bin/virtualenvwrapper.sh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="geoffgarside"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git yum git-flow)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuratio
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/home/willtrigo/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+export PATH="/home/willtrigo/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+--------------------------------------------------------------------------
+42 .zshrc
+
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_DISABLE_COMPFIX=true
+COMPLETION_WAITING_DOTS="true"
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+setopt RM_STAR_WAIT
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+ZSH_THEME="geoffgarside"
+plugins=(git git-flow)
+source $ZSH/oh-my-zsh.sh
+
+alias nor='norminette -R CheckForbiddenSourceHeader'
+alias run='cc -Werror -Wextra -Wall -o ~/projects/temp.out'
+alias rungdb='cc -Wall -Werror -Wall -g3 -o ~/projects/temp_gdb.out'
+alias pwdc='pwd | clipcopy'
+export USER='dande-je'
+export MAIL='dande-je@student.42sp.org.br'
+--------------------------------------------------------------------------
+machine .zshrc
+
+export ZSH=$HOME/.oh-my-zsh
+ZSH_DISABLE_COMPFIX=true
+COMPLETION_WAITING_DOTS="true"
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+setopt RM_STAR_WAIT
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=~/workspace/projects
+export PROJECT_HOME=$WORKON_HOME
+source /usr/bin/virtualenvwrapper.sh
+ZSH_THEME="geoffgarside"
+plugins=(git yum git-flow)
+source $ZSH/oh-my-zsh.sh
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/home/willtrigo/.cache/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+
+export PATH="/home/willtrigo/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias comp='cc -Wall -Wextra -Werror -o ~/workspace/c/output/temp.out '
+alias ssh42='mv ~/.ssh ~/.ssh_personal && mv ~/.ssh_42 ~/.ssh'
+alias sshpersonal='mv ~/.ssh ~/.ssh_42 && mv ~/.ssh_personal ~/.ssh'
+export MAIL='dande-je@student.42sp.org.br'
+export USER='dande-je'
+export clipcopy='xclip -selection clipboard'
+alias pwdc='pwd | clipcopy'

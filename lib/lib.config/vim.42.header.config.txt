@@ -1,0 +1,18 @@
+create a folder
+    $ mkdir -p ~/.vim/after/plugin
+
+enter at the folder
+    $ CD ~/.vim/after/plugin
+
+get the header
+    $ wget https://raw.githubusercontent.com/42Paris/42header/master/plugin/stdheader.vim
+
+change this lines
+    39 - '/*'
+    40 - '*/'
+    58 - let l:left = strpart(a:left, 0, s:length - s:margin * 3 - strlen(a:right) + 1)
+
+set the var env at .zshrc
+    export MAIL='dande-je@student.42sp.org.br'
+    export USER='dande-je'
+    

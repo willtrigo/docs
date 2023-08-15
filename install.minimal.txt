@@ -1,0 +1,102 @@
+base environment
+  minimal install
+
+additional software for selected environment
+  guest agents
+  administratrion tools
+  sound and video
+  system tools
+
+& sudo vim /etc/dnf/dnf_conf
+  +
+    max_parallel_downloads=10
+
+update firmware if needs 
+    sudo fwupdmgr refresh --force
+    sudo fwupdmgr get-updates
+    sudo fwupdmgr update
+
+$ sudo dnf install setroubleshoot
+$ sudo dnf install gnome-shell gnome-terminal chrome-gnome-shell gnome-tweaks inxi most detox
+$ sudo systemctl set-default graphical.target
+$ sudo dnf remove plymouth*
+$ sudo dnf remove gnome-tour
+
+$ sudo dnf install xorg-x11-drv-amdgpu
+
+LER SOBRE SELINUX PARA CONFIGURAR
+
+reboot the system
+
+$ sudo dnf install git wget
+
+$ sudo dnf install util-linux-user
+$ sudo chsh -s $(which zsh)
+
+install ohmyzsh
+
+if not auto open zsh(test after command chsh restart the machine)
+  $ sudo vi .bashrc
+    Once the .bashrc file is open, add this line to the top
+      exec zsh
+
+config oh-my-shell in both users "userhost" and root, file .zshrc
+  export ZSH="/home/'user'/.oh-my-zsh"
+  ZSH_DISABLE_COMPFIX="true"
+
+  ZSH_THEME="geoffgarside"
+
+install nautilus
+
+set in tweaks > appearance > applications > highcontrastinverse
+
+install gnome shell extensions
+  alternatab
+  gnome trash
+  pixel saver
+  sound input & output device chooser
+  topicons plus
+  gtile
+
+$ sudo dnf install gnome-shell-extension-pomodoro
+
+$ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+settings > privacy > file history & trash > disable file history
+settings > privacy > screen lock > blank screen delay > never
+settings > fonts > set bold
+
+add rpm-fusion
+
+$ sudo dnf install toolbox
+
+don't know how to use tigervnc
+  https://www.addictivetips.com/ubuntu-linux-tips/set-up-vnc-desktop-sharing-on-linux-with-tigervnc/
+
+find icons
+  /usr/share/icons/adwaita/512x512/places
+
+
+*********************
+*********************
+maybe use
+*********************
+*********************
+
+$ sudo dnf install @base-x gnome-shell gnome-terminal nautilus firefox
+$ sudo systemctl set-default graphical.target
+$ reboot
+
+$ sudo dnf install chrome-gnome-shell gnome-tweaks @development-tools
+
+$ sudo dnf install vlc
+
+$ sudo dnf group install "Hardware Support"
+
+$ sudo dnf install gnome-terminal-nautilus xdg-user-dirs xdg-user-dirs-gtk ffmpegthumbnailer
+
+$ sudo dnf install gnome-calculator gnome-system-monitor gedit evince file-roller
+
+https://www.reddit.com/r/Fedora/comments/lobnfm/guide_fedora_gnome_minimal_install/
+
+$ sudo dnf --setopt=install_weak_deps=False --best install newpackage

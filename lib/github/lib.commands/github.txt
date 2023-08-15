@@ -1,0 +1,287 @@
+-----------------------------------------------------------------------------
+CONFIG GIT-------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Configura um nome para o git
+    $ git config --global user.name "Qualquer nome"
+
+  Configuta um email para o git
+    $ git config --global user.email "qualquer email"
+
+  Configura as cores de interação futuras
+    $ git config --global color.ui true
+
+  Para iniciar o git na pasta, precisa abrir o terminal e acessar a pasta e
+    $ git init
+
+  ---------------------------------------------------------------------------
+  Criando chave publica
+
+  Gerar a chave
+    $ ssh-keygen
+
+  Com a chave gerada ela fica na pasta ~/.ssh/
+
+  Adicioando a chave no github, acesse o github vá onde vc pode inserir a chave e cole o conteudo do seguinte codigo
+    $ cat id_rsa.pub
+
+  ---------------------------------------------------------------------------
+  Ignorando arquivos
+
+  Cria um arquivo em branco para o git usar como blocker, dentro dele inserir os arquivos
+    $ vim .gitignore
+
+  E insira esse arquivo no controle de versão
+
+  ---------------------------------------------------------------------------
+  Criar um novo repositorio
+
+  Para montar um novo repositorio você precisa adicionar o caminho do github
+    $ git remote add origin "caminho do github com o final .git"
+
+-----------------------------------------------------------------------------
+TYPE OF STATUS---------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Visualizar status
+    $ git status
+
+  ---------------------------------------------------------------------------
+  3 estágios
+
+  Untracked files(Sem controle de versão)
+  Changes to be committed(já está no controle de versão, mas sem o commit)
+  Arquivo commitado
+
+  ---------------------------------------------------------------------------
+  Único arquivo
+
+  Na fase Untracked files você precisa adicionar os arquivos com
+    $ git add "nome do arquivo"
+
+  Adicionar o commit para o arquivo modificado
+    $ git commit -m "escrever o commit"
+
+  Adicionando o commit para o arquivo modificado mais para juntar com o último commit
+    $ git commit -m "escrever o commit" --amend
+  ---------------------------------------------------------------------------
+  Múltiplos arquivos
+
+  Adicionar todos os arquivos para dar o commit
+    $ git add .
+
+  Adicionar os arquivos necessarios para o commit e depois dar o comando
+    $ git commit
+
+  Adicionar o commit para todos os arquivos modificados
+    $ git commit -a -m "escrever o commit"
+
+  Adicionar o commit para todos os arquivos modificados mais para juntar com o último commit
+    $ git commit -a -m "escrever o commit" --amend
+
+  ---------------------------------------------------------------------------
+  Visualizar os commits
+    $ git log
+
+  Visualizar as diferenças dos arquivos com o commit
+    $ git log -p -5
+
+  Visualizar todo o commit em uma linha
+    $ git log --pretty=oneline
+  Visualizar todo o commit em uma linha formatada
+    $ git log --pretty=format:"%h - %an, %ar : %s"
+
+  Visualizar todos os commit em um periodo de tempo
+    $ git log --since=2.days
+    $ git log --since=2.weeks
+
+-----------------------------------------------------------------------------
+VOLTANDO VERSÃO--------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Tem dois tipos de volta a solf e a hard, a soft volta o commit/s e deixam os arquivos disponiveis para um novo commit ou a hard que remove os commits e os arquivos
+
+  Voltando a versão soft
+    $ git reset HEAD~1 --soft
+
+  Voltando a versão hard
+    $ git reset HEAD~1 --hard
+
+-----------------------------------------------------------------------------
+BRANCH-----------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Visualizar branch
+
+    Visualizar em que branch vc está
+      $ git branch
+
+    Visualizar todos os branchs disponiveis
+      $ git branch -a
+
+  ---------------------------------------------------------------------------
+  Criar um novo branch
+    $ git checkout -b "nome da ramificação"
+
+  ---------------------------------------------------------------------------
+  Trocar branch
+    $ git checkout "nome da ramificação"
+
+  ---------------------------------------------------------------------------
+  Apagar branch
+    $ git branch -D "nome da ramificação"
+
+  ---------------------------------------------------------------------------
+  Merge branch
+
+    Dar um merge somente quando for para o arquivo principal
+      $ git merge "nome do branch"
+
+    Juntar um branch com o master local, conselho de usar o rebase somente LOCALMENTE
+    Do (master) < funcionalidade
+      $ git rebase "nome do branch"
+
+    Voltar um commit que foi apagado
+      $ git reflog
+      $ git merge "hash que foi apagado"
+
+    Merge para agrupar em um unico commit ao invez de ter todos os commits da funcinalidade
+      $ git merge "nome do branch" --squash
+      $ git commit -m "commit da funcionalidade"
+
+  ---------------------------------------------------------------------------
+  Remove branch remote
+
+    Para remover um remote do seu git local
+      $ git push origin --delete "nome do branch"
+
+-----------------------------------------------------------------------------
+PUSH AND PULL----------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Push
+
+    Dar um push para o servidor do github, vc só da o push no branch que você está ativo
+      $ git push origin "branch"
+
+  ---------------------------------------------------------------------------
+  Pull
+
+    Para dar um pull é quando vc precisa carregar alguma alteração do github
+      $ git pull origin "branch"
+
+    Para sincronizar somentes os branchs
+      $ git pull
+
+-----------------------------------------------------------------------------
+CLONE------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Para clonar um repositorio do github, se não colocar o nome do diretorio ele cria com o nome que está no github
+    $ git clone "caminho do github" "nome do diretorio"
+
+  Para pegar os outros branchs que estão no github
+    $ git checkout -b "nome do branch" origin/"nome do branch"
+    $ git pull
+
+-----------------------------------------------------------------------------
+FORK-------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Dando um fork no site do github você acaba copiando o repositorio para os seus repositorios e com isso vc pode modificar o repositorio como se fosse seu, sem alterar o repositorio copiado (oficial)
+
+-----------------------------------------------------------------------------
+TAGS-------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Para criação de tags nada mais é do que um apontamento em um determinado commit, com isso vc estipula qual versão o software se encontra
+  OBS:(major version).(minor version).(patch version)
+    $ git tag 0.1.0
+    $ git push origin master --tags
+
+  Listar todas as tags
+    $ git tag -l
+
+-----------------------------------------------------------------------------
+BARE-------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Criar uma pasta para ser o seu repositorio local
+    $ mkdir "nome do repositorio".git
+
+  Inicializar o git nessa pasta
+    $ git init --bare
+
+  Adicionado o repositorio local
+    $ git remote add local ssh://"caminho"/"nome do repositorio".git
+
+  Dar push local
+    $ git push local "branch"
+
+-----------------------------------------------------------------------------
+HOOK-------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Para criar um hook voce tem que estar no Bare e acessar a pasta
+    $ cd hooks/
+
+  Criando o hook
+    $ sudo vim "nome para seu SH"
+    $ sudo vim post-receive
+
+  Dentro do arquivo de exemplo "post-receive"
+    #!/bin/sh
+    //exemplo GIT_WORK_TREE=/Users/willtrigo/'pasta exemplo'/meusite.com.br git checkout -f
+    //'git checkout -f' copia todos os arquivos menos coisas relacionadas com o git
+    $ GIT_WORK_TREE='caminho' git checkout -f
+
+  Dar permissão para o SH criado
+    $ chmod +x post-receive
+
+-----------------------------------------------------------------------------
+CLEAN-------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Para remover arquivos que não estão no controle de versão
+    $ git clean -f
+
+  Para remover um origin cadastrado
+    $ git remote rm origin
+
+  Para remover arquivos do cache
+    $ git rm -r --cache
+    $ git add .
+    $ git commit -am 'Removing ignored files'
+
+*************************************
+*************************************
+RETURN TO COMMIT 0
+*************************************
+*************************************
+  $ git update-ref -d HEAD
+
+*************************************
+*************************************
+SET BRANCH MAIN
+*************************************
+*************************************
+  $ git config --global init.defaultBranch main
+
+*************************************
+*************************************
+ADD MULTIPLES REPOSITORIES
+*************************************
+*************************************
+  Create a new repository and clone
+    $ git clone git@github.com:willtrigo/{new repository}.git {new repository}
+
+  Set master to main and
+    $ git checkout main
+
+  Get old repository files
+    $ git remote add {old repository} {git@github.com:willtrigo/{old repository}.git}or{path of the old repository in your machine}
+    $ git fetch {old repository}
+    $ git merge {old repository}/master --allow-unrelated-histories
+
+  Remove old repository path
+    $ git remote rm {old repository}

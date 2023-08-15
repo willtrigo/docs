@@ -1,0 +1,33 @@
+enable dark mode
+  chrome://flags/
+    search for dark
+    enable
+      force dark mode for web contents
+
+set default browser
+  chrome://settings/defaultBrowser
+    choose this browser to be your default
+
+  on startup
+    enable
+      open the new tab page
+
+advanced
+
+  languages
+    english
+    portuguese
+    spanish
+
+  downloads
+    /home/willtrigo/Downloads
+
+select built-in audio pro
+  chrome://settings/content/microphone
+
+  allow duolingo microphone after use duolingo in "allowed to use your microphone"
+
+chrome://extensions/
+  fedora user agent
+  gnome shell integration
+  video speed controller

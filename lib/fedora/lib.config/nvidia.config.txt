@@ -1,0 +1,5 @@
+https://rpmfusion.org/Howto/NVIDIA
+
+determining your card model
+  $ /sbin/lspci | ag VGA
+  $ /sbin/lspci | grep -e VGA

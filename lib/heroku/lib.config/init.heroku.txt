@@ -1,0 +1,40 @@
+Install
+  $ sudo curl https://cli-assets.heroku.com/install.sh | sh
+
+Install plugin autocomplete
+  $ heroku update
+  $ heroku plugins:install autocomplete
+  $ heroku autocomplete
+
+Para iniciar o heroku
+  $ heroku login
+
+Criar um app
+  $ heroku create 'nome do app'
+
+Add postgreSQL para a app
+  $ heroku addons:create heroku-postgresql:hobby-dev
+
+Ir no site do heroku, no dashboard>settings>Reveal config vars e inserir as variaveis do meu .env
+
+para atualizar o site no heroku
+  $ git push heroku master
+
+Para migrate o database
+  $ heroku run python manage.py migrate
+
+Para setar o superuser
+  $ heroku run python manage.py createsuperuser
+
+
+
+  Provisione um banco de dados no Heroku:
+  heroku addons:create heroku-postgresql:hobby-dev --as MY_DB
+
+  As vezes isso pode demorar um pouco então execute:
+  heroku pg:wait
+
+  Agora promova o banco que ele criou para ser seu banco principal:
+  heroku pg:promote MY_DB
+
+create a runtime.txt

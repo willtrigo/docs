@@ -1,0 +1,61 @@
+---------------------------
+VIRTUAL ENV SIMPLE---------
+---------------------------
+
+  Dentro da pasta do projeto
+    $ virtualenv -p /usr/bin/'versão do python' 'nome do projeto'
+    $ virtualenv -p /usr/bin/python3.6 myproject.py3.6
+
+  Criar um autoenv quando entrar na pasta do projeto
+    $ cd 'nome do projeto'
+    $ touch 'criar dentro do projeto'/.env
+    $ vim 'criar dentro do projeto'/.env
+
+  Dentro do arquivo
+    $ . ../bin/activate
+
+  Excluir projeto
+    $ deactivate
+    $ cd ..
+    $ rm -rf 'nome do projeto'
+
+---------------------------
+VIRTUAL ENV DYNAMIC--------
+---------------------------
+
+  *Só precisa configurar a primeira vez na máquina
+    Configurar caminho para os projetos
+      $ cd ~
+      $ sudo vim .zshrc
+
+    Dentro do arquivo inserir
+      $ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+      $ export WORKON_HOME=~/workspace/projects
+      $ export PROJECT_HOME=$WORKON_HOME
+      $ source /usr/bin/virtualenvwrapper.sh
+
+  -------------------------
+
+  Para criar o projeto
+    $ mkvirtualenv -p /usr/bin/'versão do python' 'nome do projeto'
+    $ mkvirtualenv -p /usr/bin/python3.6 myproject.py3.6
+
+  Criar um autoenv quando entrar na pasta do projeto
+    $ workon 'nome do projeto'
+    $ cdvirtualenv
+    $ touch 'criar dentro do projeto'/.env
+    $ vim 'criar dentro do projeto'/.env
+
+  Excluir projeto
+    $ deactivate
+    $ rmvirtualenv 'nome do projeto'
+
+---------------------------
+VIRTUAL ENV DYNAMIC TEMP---
+---------------------------
+
+  Cria um env temporario
+    $ mktmpenv -p /usr/bin/python3.6
+
+  Exclui env temporario
+    $ deactivate

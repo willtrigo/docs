@@ -1,0 +1,14 @@
+Setup(f2)
+  select Columns and remove
+    PID
+    USER
+    STATE
+    PERCENT_CPU
+    PERCENT_MEM
+    TIME
+    Command
+
+  select meters and add in right column
+    clock
+
+Tree(f5)

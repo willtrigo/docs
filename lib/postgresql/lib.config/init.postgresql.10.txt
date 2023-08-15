@@ -1,0 +1,44 @@
+Somente no install
+  Instalar o repository RPM
+    $ dnf install https://download.postgresql.org/pub/repos/yum/10/fedora/fedora-28-x86_64/pgdg-fedora10-10-4.noarch.rpm
+
+  Install cliente e server
+    $ dnf install postgresql10 postgresql10-server -y
+
+  Configuração o serviço para ficar habilitado
+    $ sudo /usr/pgsql-10/bin/postgresql-10-setup initdb
+
+Iniciar o postgresql
+  $ sudo systemctl enable postgresql
+  $ sudo systemctl start postgresql-10
+
+Para abrir o postgres
+  $ sudo -iu postgres psql
+
+Para criar senha do postgres
+  $ echo 'senha' | md5sum
+
+Criar user do bd
+  # create user meu_projeto_db_user with password 'senha|md5sum' createdb;
+  # create database meu_projeto_db owner meu_projeto_db_user;
+
+Para pegar o caminho do pg_hba, tem que estar no postgres
+  # SHOW config_file;
+
+Para configurar o pg_hba
+  trocar o fim do arquivo
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+local   all              all                                    trust
+# IPv6 local connections:
+host    all             all             ::1/128                 trust
+# Allow replication connections from localhost, by a user with the
+# replication privilege.
+host    name_bd         name_user       127.0.0.1/32            md5
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+Restart o postgresql
+  $ sudo systemctl restart postgresql-10.service

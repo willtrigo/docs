@@ -1,0 +1,5 @@
+Set the cache
+  $ sudo nano /etc/PackageKit/PackageKit.conf
+
+uncomment line
+  #KeepCache=false

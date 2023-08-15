@@ -1,0 +1,20 @@
+get in the website https://rpmsphere.github.io/
+  $ sudo dnf install https://github.com/rpmsphere/noarch/raw/master/r/rpmsphere-release-32-1.noarch.rpm
+
+install veracrypt
+  $ sudo dnf install veracrypt
+
+
+https://www.google.com/search?q=bcrypt+python&tbs=qdr:y&ei=CQvtX5qWJ8qV5OUPso2h0As&start=0&sa=N&ved=2ahUKEwjavq_t6_btAhXKCrkGHbJGCLo4FBDy0wN6BAgKEDU&biw=1920&bih=1009
+http://zetcode.com/python/bcrypt/
+https://stackoverflow.com/questions/36057308/bcrypt-how-to-store-salt-with-python3
+https://passlib.readthedocs.io/en/stable/lib/passlib.hash.bcrypt.html
+https://github.com/pyca/bcrypt/blob/master/src/bcrypt/__init__.py
+https://github.com/willtrigo/patinhas_que_brilham/blob/master/pqb/settings.py
+https://www.google.com/search?biw=1920&bih=1009&ei=mhLtX-bxBfad5OUP0ISVoA4&q=best+hash+function&oq=best+&gs_lcp=CgZwc3ktYWIQAxgAMggIABDJAxCRAjIECAAQQzIECAAQQzIICC4QxwEQowIyAggAMgIIADICCAAyAggAMgIIADICCAA6BAgAEEc6BwgAEMkDEEM6AgguOgUIABCRAjoICC4QxwEQrwFQ3-LvAliW7e8CYLCC8AJoAHAEeACAAZQBiAGSBZIBAzAuNZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab
+https://softwareengineering.stackexchange.com/questions/49550/which-hashing-algorithm-is-best-for-uniqueness-and-speed
+
+bcrypt
+scrypt
+pbkdf2
+argon2

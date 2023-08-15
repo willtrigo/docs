@@ -1,0 +1,101 @@
+Download
+	-qBittorrent(flatpak)
+Job
+	-LibreOffice(flatpak)
+	-Atom(flatpak)
+	-Python
+		sudo dnf install python33 python34 python35 python36 pypy pypy3 jython
+		sudo dnf install tox
+	-Py.test
+	-Zeal(flatpak)
+	-virtualenv/virtualenvwrapper/autoenv
+	-SQLiteStudio
+	-PostgreSQL
+	-GitHub
+	-GitFlow
+	-node.js
+	-vim
+	-nano
+	-Pomodoro(gnome extensions)
+	-Slack(flatpak)
+	-VSCodium(flatpak)
+	-Peek(flatpak)
+	-Podman
+	-Cockpit
+	-heroku(npm)
+	-waydroid
+Entertainment
+	-vlc(flatpak)
+	-steam(flatpak)
+	-Spotify(flatpak)
+	-tibia
+	-goverlay
+	-bottles(flatpak)
+		-pokerstars
+		-magic arena
+	-wine
+	-winetricks
+	-Amazon Kindle
+	-Netflix(atalho do browser)
+System
+	-xorg-x11-drv-amdgpu
+	-radeontop
+	-BleachBit + fslint
+	-hplip
+	-fedora media writer(flatpak)
+	-veracrypt
+	-archive manager(gnome)
+	-android-tools
+	-gparted
+	-brave(flatpak)
+	-chromium-freeworld(flatpak)
+		*Chrome Extension
+			- Fedora User Agent
+			- GNOME Shell integration
+			- Video Speed Controller
+	-google chrome
+		*Chrome Extension
+			- Vimeo Super Downloader
+			- Advanced Font settings
+			- Code Climate
+			- Fedora User Agent
+			- Guardião - Itau 30 horas
+			- GNOME Shell integration
+			- Google Docs Offline
+			- React Developer Tools
+			- Video Speed Controller
+		*Chrome Apps
+			- Docs
+			- Sheets
+			- Slides
+	-Mega(flatpak)
+	-Audacity(flatpak)
+	-DNFDragora
+	-DropBox(flatpak)
+	-Intel Graphics
+	-nvidia
+	-fbreader
+	-htop
+	-zsh/geoffgarside(theme)+font(incosolata)
+	-Alien(conversor de .deb para .rpm) --to-rpm /caminho/para/arquivo.deb
+	-NitroShare
+	-GNOME Tweak Tool
+	-Tray Icons: Reloaded(gnome extensions)
+	-gtile(gnome extensions)
+	-Simple system Monitor(gnome extensions)
+	-Another Window Session Manager(gnome extensions)
+	-Gnome trash(gnome extensions)-talvez saia
+	-Sound Input & Output Device Chooser(gnome extensions)
+	-the_silver_searcher(ag better than grep command)
+	-inxi
+	-pavucontrol(flatpak)
+	-dconf-editor(flatpak)
+	-EasySSH(flatpak)
+	-iptraf-ng
+	*trocar o localhost por machine no painel de controle do fedora, fica em Details
+Communication
+	-Skype(flatpak)
+	-Telegram(flatpak)
+	-TeamSpeak(flatpak)
+	-Discord(flatpak)
+	-Zoom(flatpak)

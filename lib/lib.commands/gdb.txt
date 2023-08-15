@@ -1,0 +1,14 @@
+$ cc -Wall -Wextra -Werror -o ~/projects/temp.out -g3 *.c 
+$ gdb ~/projects/temp.out
+    start
+    set args <variable_name>=<value>
+
+$ gdb --args ~/projects/temp.out daniel
+$ gdbtui --args ~/projects/temp.out daniel
+
+
+
+para andar para a proxima linha
+n
+para entrar na função
+s

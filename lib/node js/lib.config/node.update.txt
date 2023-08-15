@@ -1,0 +1,18 @@
+if can't change the version of the nodejs, remove folders correlated with nodejs, install nvm latest
+  $ curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh -o install_nvm.sh
+
+  $ bash install_nvm.sh
+
+insert if not have in the .zshrc
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+install node
+  $ nvm install --lts
+    or
+  $ nvm install x.x.x
+
+set defatult notejs system, normally is version that you will use.
+  $ nvm alias default x.x.x

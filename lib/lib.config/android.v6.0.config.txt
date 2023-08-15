@@ -1,0 +1,5 @@
+Disable Mouse Integration for VirtualBox: Run virtual machine go to menu Machine > Disable Mouse Integration or simply press Right CTRL + i to enable/disable mouse integration.
+
+Fix Blankscreen issue: Go to Settings > Display > Sleep > Select “Never time out”
+
+Important! For VMware: After setting up, go to “Virtual Machine Settings” > under “Hardware” Tab > Select “Display” > Enable “Accelerate 3D graphics”

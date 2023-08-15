@@ -1,0 +1,59 @@
+Install packages
+  - fonts
+    Inconsolata-g
+  - file-icons
+  - platiformio-ide-terminal
+  - busy-signal
+  - intentions
+
+
+
+edit>config
+```
+  "*":
+  core:
+    disabledPackages: [
+      "autocomplete-css"
+      "autocomplete-html"
+      "language-c"
+      "language-clojure"
+      "language-coffee-script"
+      "language-csharp"
+      "language-css"
+      "language-gfm"
+      "language-go"
+      "language-html"
+      "language-hyperlink"
+      "language-java"
+      "language-javascript"
+      "language-json"
+      "language-less"
+      "language-make"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-php"
+      "language-python"
+      "language-ruby"
+      "language-ruby-on-rails"
+      "language-sass"
+      "language-sql"
+      "language-todo"
+      "language-toml"
+      "language-typescript"
+      "language-xml"
+      "language-yaml"
+      "welcome"
+    ]
+    telemetryConsent: "no"
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "9e852474-fda1-4c51-968f-bd1bc6e70fbe"
+  "linter-ui-default":
+    showPanel: true
+  welcome:
+    showOnStartup: false
+```

@@ -1,0 +1,15 @@
+install winesteam
+
+create a new game "steam"
+download steam.exe
+install steam.exe(you will need test some wine versions)
+
+configure steam > runner options > arguments > -no-cefsandbox
+wine configuration > applications > windows version > windows 7
+wine configuration > staging > enable some choices
+winetricks > corefonts
+
+env WINEPREFIX=/home/user/.local/share/lutris/runners/winesteam winecfg
+env WINEPREFIX=/home/user/.local/share/lutris/runners/winesteam winetricks corefonts
+
+copy new "steam" to ~/.local/sgare/lutris/runners/winestream/prefix64

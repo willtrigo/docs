@@ -1,0 +1,7 @@
+https://github.com/mozilla/geckodriver
+download last release
+
+$ sudo tar xvzf ~/Downloads/geckodriver*.tar.gz -C /usr/local/bin/geckodriver
+
+  **tutorial falou para usar root, porem eu usei como user normal e ate o momento foi
+  $ sudo chown -R root:root /tmp/geckodriver*

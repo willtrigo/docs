@@ -1,0 +1,10 @@
+new profile
+    willtrigo
+
+in the .zshrc
+    alias nor='norminette -R CheckForbiddenSourceHeader'
+    alias run='cc -Wall -Werror -Wall -o ~/projects/temp.out'
+    alias rungdb='cc -Wall -Werror -Wall -g3 -o ~/projects/temp_gdb.out'
+    alias pwdc='pwd | clipcopy'
+    export USER='dande-je'
+    export MAIL='dande-je@student.42sp.org.br'

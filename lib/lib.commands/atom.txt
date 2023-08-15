@@ -1,0 +1,3 @@
+REGEX para replace ativar o Regex na busca(CTRL+ALT+/)
+  "find" (src|href)="((img|css|js).*?)"
+  "replace" $1="{% static '$2' %}"

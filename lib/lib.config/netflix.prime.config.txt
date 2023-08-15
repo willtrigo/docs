@@ -1,0 +1,13 @@
+find and install libwidevinecdm.so in
+  $ cp downloads/libwidevinecdm.so /etc/chromium
+
+Need folder Desktop to create the file .desktop
+
+open chromium browser, enter netflix.com or primevideo
+settings > more tools > create shortcut > open as window > create
+
+$ cd /home/user/Desktop
+rename file to Netflix.desktop
+$ move file to /home/user/.local/share/applocations
+
+*fix icon

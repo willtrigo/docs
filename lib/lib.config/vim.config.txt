@@ -1,0 +1,19 @@
+set nu
+set listchars=eol:¬,tab:>·,trail:·,extends:>,precedes:<,space:·
+set list
+set hlsearch
+hi SpecialKey ctermfg=238
+set showcmd
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+syntax on
+filetype on

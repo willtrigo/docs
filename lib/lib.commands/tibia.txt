@@ -1,0 +1,34 @@
+Baixar o novo cliente do tibia
+  https://secure.tibia.com/account/?subtopic=downloadclient
+  http://download.tibia.com/tibia.x64.tar.gz
+  $ wget http://download.tibia.com/tibia.x64.tar.gz -O ~/Downloads/tibia.x64.tar.gz
+
+Descompactar a pasta
+  $ sudo tar -zxvf Downloads/tibia.x64.tar.gz -C /opt/
+
+mover a pasta pelo terminal
+  $ sudo mv ~/Downloads/'versão do tibia'/ /opt/
+
+Mudar a permissão da pasta para melhor funcionamento do jogo
+  $ sudo chmod -R 777 /opt/'tibia atualizado'
+
+Copiar a pasta minimap do antigo para o novo
+  $ cp -rf /opt/'pasta antiga do tibia'/minimap /opt/'tibia atualizado'/minimap
+
+Copiar config do antigo para o novo
+  $ mkdir /opt/'tibia atualizado'/conf/
+  $ cp /opt/'pasta antiga do tibia'/conf/clientoptions.json /opt/'tibia atualizado'/conf
+
+Atualizar com vim o arquivo de atalho
+  $ sudo vim /usr/share/applications/tibia.desktop
+    [Desktop Entry]
+    Name=Tibia
+    Exec=bash /opt/Tibia/start-tibia-launcher.sh
+    Icon=/opt/Tibia/tibia.ico
+    Type=Application
+    Categories=Games;Other;
+  $ cp /usr/share/applications/tibia.desktop ~/Desktop/tibia.desktop
+
+Remover ultimo instalado
+  $ sudo rm -rf /opt/'pasta antiga do tibia'
+  $ rm -f ~/Downloads/tibia.x64.tar.gz

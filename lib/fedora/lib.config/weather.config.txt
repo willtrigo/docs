@@ -1,0 +1,2 @@
+para trocar de fahrenheit para celsius
+  gsettings set org.gnome.GWeather temperature-unit "'centigrade'"

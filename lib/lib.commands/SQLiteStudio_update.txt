@@ -1,0 +1,26 @@
+Baixar o novo cliente do SQLite
+  https://sqlitestudio.pl/index.rvt?act=download
+
+Descompactar a pasta
+
+mover a pasta pelo terminal
+  sudo mv Downloads/"GitEye atualizado" /opt
+
+cria um link simbolo
+  sudo ln -s /opt/SQLiteStudio/sqlitestudio /usr/local/bin/
+
+Atualizar com vim o arquivo de atalho
+  sudo vim /usr/share/applications/SQLiteStudio.desktop
+
+Dentro do arquivo atualizar somente o caminho fechar e salvar
+  :wq!
+
+
+Caso não tenha o SQLiteStudio.desktop
+
+[Desktop Entry]
+Name=SQLiteStudio
+Exec=sqlitestudio
+Icon=/opt/SQLiteStudio/sqlitestudio.ico
+Type=Application
+Categories=Application;Other;

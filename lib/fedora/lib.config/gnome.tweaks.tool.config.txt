@@ -1,0 +1,7 @@
+Silverblue install
+  $ rpm-ostree upgrade --install gnome-tweak-tool
+
+-------------------------------------------------
+appearance
+  applications - Adwaita-dark
+  background and lock screen - change the photo

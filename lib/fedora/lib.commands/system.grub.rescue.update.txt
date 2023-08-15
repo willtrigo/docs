@@ -1,0 +1,6 @@
+  $ sudo rm /boot/*rescue*
+  $ sudo /usr/lib/kernel/install.d/51-dracut-rescue.install add $(uname -r) "" /lib/modules/$(uname -r)/vmlinuz
+
+or
+
+  $ sudo dnf reinstall kernel-core

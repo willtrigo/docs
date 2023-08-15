@@ -1,0 +1,69 @@
+windows virtual machine
+  https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/
+
+  kvm/qemu + libvirtd + virt-manager
+    https://sempreupdate.com.br/configuracoes-e-uso-do-virt-manager-para-kvm-no-fedora-ubuntu-debian-centos-e-derivados/
+    https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/
+
+    virtualização
+      kvm + libvirt + virt-manager
+      https://cockpit-project.org/blog/cockpit-200.html
+
+
+cockpit is for admin virtual machines or manager devices
+  $ sudo dnf install cockpit
+  $ sudo systemctl enable --now cockpit.socket
+  $ sudo firewall-cmd --add-service-cockpit --permanent
+
+  brower para acessar o cockpit
+    localhost:9090
+  entrnado no cockpit tem uma vunerabilidade em processadores da intel, precisa instalar uma coisa de tira performance do processador que é a virtualização dos cores.
+
+virt-manager/libvirt
+  $ sudo dnf group install Virtualization
+
+able audio kvm/qemu
+  $ sudo nano /etc/libvirt/qemu.conf
+    remove # of this lines
+      vnc_allow_host_audio = 1
+      user = "root"
+      group = "root"
+
+  restart the KVM service
+
+
+4096
+2
+max video memory
+
+gnome minimal
+$ sudo dnf group install Virtualization
+$ sudo dnf group install Multimedia
+  talvez
+
+share folder you need to open the kvm
+show virtual hardware details > add hardware > filesystem
+  path / squash / immediate / path of the folder share (/home/user/share) / name of the path (hostshare)
+start the vm
+create a folder to connect the folders, indicated to create at home user
+  $ mkdir hostfiles
+always you need to share files, you will need to mount the hostshare
+  $ sudo mount -t 9p -o trans=virtio,version=9p2000.L hostshare /home/user/hostfiles
+
+this way work in unix systems
+
+windows folder share
+  disable the fucking firewall
+  install spice-webdavd latest
+  install spice-guest-tool latest
+
+virtual machine > windows > open > show virtual hardware details > add hardware > channel
+  org.spice-space.webdav.0
+  Spice port (spiceport)
+  org.spice-space.webdav.0
+
+gereciador de tarefas > spice-webdavd > start
+
+only works with cockpit remote viewer
+
+in the blog, change the color of names that need a special name, look for colors that don't affect people with daltonism

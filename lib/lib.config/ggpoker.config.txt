@@ -1,0 +1,16 @@
+d3dx9
+msls31
+d3dcompiler_43
+d3compiler_47
+
+allfonts
+d3dx11
+dotnet48
+gecko
+gdiplus
+ie8_kb2936068
+mono
+vbrun6
+vcredist2019
+winhttp
+xact_x64

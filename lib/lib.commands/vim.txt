@@ -1,0 +1,117 @@
+Navegar pelo documento
+  h 'seta esquerda'
+  j 'seta baixo'
+  k 'seta cima'
+  l 'seta direita'
+
+---------------------------------------------------------------------------
+Voltar para o modo normal
+  ESC
+
+-----------------------------------------------------------------------------
+MODO NORMAL------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Similar ao crtl + z
+    u
+
+  ---------------------------------------------------------------------------
+  Colar o que foi copiado
+    p
+
+  ---------------------------------------------------------------------------
+  Copiar
+
+    Copiar uma linha inteira
+      yy
+
+    Copiar apontando a direção
+      y
+    Apertando "y" com ou sem o numero o vim fica em modo de espera e com isso eu dou a direção que eu quero que seja copiada
+      y2
+
+  ---------------------------------------------------------------------------
+  Recortar
+
+    Recortar uma linha inteira
+      dd
+
+    Recortar apontando a direção
+      d
+      d2
+      *mesma coisa do copiar
+
+    Recortar um único cáracter
+      x
+      
+-----------------------------------------------------------------------------
+MODO INSERÇÃO----------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Inserir
+    i
+
+  ---------------------------------------------------------------------------
+  Append
+    a
+
+  ---------------------------------------------------------------------------
+  Criar uma nova linha
+    o
+
+-----------------------------------------------------------------------------
+MODO VISUAL------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Seleção do texto em linhas
+    v
+
+  ---------------------------------------------------------------------------
+  Seleção do texto em blocos
+    ctrl + v
+
+-----------------------------------------------------------------------------
+MODO COMANDO-----------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Salvar um novo arquivo
+    :w "nome do arquivo"
+
+  ---------------------------------------------------------------------------
+  Pular para uma determinada linha
+    :"número da linha"
+    vim "nome do arquivo" +"número da linha"
+
+  ---------------------------------------------------------------------------
+  Pesquisar uma palavra
+
+    De cima para baixo
+      /"palavra"
+
+    De baixo para cima
+      ?"palavra"
+
+    Para pular para a próxima palavra encontrada
+      n
+
+  ---------------------------------------------------------------------------
+  Abrir mais de um documento
+    vim "nome do arquivo" "nome do arquivo"
+
+  ---------------------------------------------------------------------------
+  Para mudar de documento
+
+    Pular para o próximo
+      :next
+
+    Pular para o anterior
+      :previous
+
+  ---------------------------------------------------------------------------
+  Dois documentos na mesma tela
+
+    Colocar os dois documentos na mesma tela
+      :vsplit "nome do arquivo"
+
+    mudar de um arquivo para o outro que estão na mesma tela
+      ctrl + w + "seta para o lado"

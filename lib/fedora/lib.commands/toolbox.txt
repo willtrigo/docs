@@ -1,0 +1,34 @@
+install
+  $ sudo dnf install toolbox
+
+create container
+  $ toolbox create --container <name>
+
+enter container
+  $ toolbox enter --container <name>
+
+create .desktop (~/.local/share/applications)
+  [Desktop Entry]
+  Type=Application
+  Encoding=UTF-8
+  Name=Sample Application Name
+  Comment=A sample application
+  Exec=toolbox run -c 'container' 'program' %U
+  Icon=application.png
+  Terminal=false
+
+path to container is in /home/user/.local/share/containers you must use the search for find the right container more easier
+
+with right container
+  /usr/share/applications
+    stay the .desktop
+
+  /usr/share/icons
+    stay the icons of the aplications
+
+if you want to create the desktop only in the user specific
+  /home/user/.local/share/applications
+  /home/user/.local/share/icons
+for the whole system
+  /usr/share/applications
+  /usr/share/icons

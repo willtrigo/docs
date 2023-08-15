@@ -1,0 +1,65 @@
+Settings > Keyboard > Shortcuts > Custom Shortcuts
+
+Atom
+atom
+crtl+alt+a
+
+-----------------------------------------------------------------------------
+Nautilus
+nautilus
+crtl+alt+n
+
+-----------------------------------------------------------------------------
+Terminal
+gnome-terminal
+crtl+alt+t
+
+-----------------------------------------------------------------------------
+Chromium vaapi
+chromium-freeworld --incognito
+crtl+alt+c
+
+-----------------------------------------------------------------------------
+Brave
+flatpak run com.brave.Browser 
+crtl+alt+b
+
+-----------------------------------------------------------------------------
+Chrome
+google-chrome --incognito
+crtl+alt+g
+
+-----------------------------------------------------------------------------
+Firefox
+firefox --private-window
+crtl+alt+f
+
+-----------------------------------------------------------------------------
+Spotify
+/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=spotify --file-forwarding com.spotify.Client @@u %U @@
+ctrl+alt+s
+
+-----------------------------------------------------------------------------
+volume
+  mute
+  shift+ctrl+alt+m
+
+  up
+  shift+ctrl+alt++
+
+  down
+  shift+ctrl+alt+-
+
+  next
+  shift+ctrl+alt+n
+
+  previous
+  shift+ctrl+alt+b
+
+  play
+  shift+ctrl+alt+p
+
+-----------------------------------------------------------------------------
+Search for swi win
+  Switch windows
+    alt+tab

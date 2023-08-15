@@ -1,0 +1,2 @@
+Programa para mudar os theme do bootup
+  $ sudo dnf remove -y plymouth*

@@ -1,0 +1,5 @@
+Set fastest mirror
+  $ sudo dnf command --setopt fastestmirror=1
+
+Set fastest mirror permanently
+  $ sudo dnf config-manager --setopt fastestmirror=1 --save

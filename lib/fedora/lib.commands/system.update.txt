@@ -1,0 +1,9 @@
+$ sudo dnf clean all
+$ sudo dnf -y --releasever=38 --setopt deltarpm=false distro-sync
+  and
+$ flatpak update
+
+$ sudo dnf upgrade --refresh
+$ sudo dnf install dnf-plugin-system-upgrade
+$ sudo dnf system-upgrade download --release=29
+$ sudo dnf system-upgrade reboot

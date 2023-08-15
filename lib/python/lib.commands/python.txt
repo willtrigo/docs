@@ -1,0 +1,57 @@
+start a project
+
+se o pip não estiver instalado atualizar para conseguir instalar o virtualenv
+config virtualenv python para a versão que deve ser usada
+  $ pip install --upgrade pip
+
+create requirements.txt
+  $ pip freeze > requirements.txt
+
+-----------------------------------------------------------------------------
+STRING-----------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+  Deixar somente a primeira string em maiúscula
+    "txt".capitalaze()
+
+  Remover espaços em brancos de uma string do inicio e do fim
+    "txt".strip()
+
+-----------------------------------------------------------------------------
+PYTEST-----------------------------------------------------------------------
+-----------------------------------------------------------------------------
+  ---------------------------------------------------------------------------
+  Ex.:
+  import "função para test"
+  import pytest
+
+  class "nome da classe":
+
+    @pytest.fixture
+    def "nome da função a ser reutilizada"(self):
+      return "função"
+
+    def "test"(self, "nome do pytest.fixture"):
+      assert "test"
+
+  ---------------------------------------------------------------------------
+  Parametrização
+
+  import pytest
+
+  @pytest.mar.parametrize("entrada,valor_esperado", [
+    (0,0),
+    (1,1),
+    (10,1000),
+  ])
+
+  def "test"("entrada, valor_esperado"):
+    assert "função"("entrada") == "valor_esperado"
+
+  ---------------------------------------------------------------------------
+  Skip test
+
+  from unittest import skip
+
+  @skip
+  def...

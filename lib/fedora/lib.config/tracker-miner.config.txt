@@ -1,0 +1,5 @@
+disable tracker
+  $ sudo systemctl --global mask tracker-miner-fs-3.service
+  $ sudo systemctl --global mask tracker-xdg-portal-3.service
+
+https://gist.github.com/vancluever/d34b41eb77e6d077887c

@@ -1,0 +1,11 @@
+Install the fedora-packager and fedora-review tools
+  $ dnf install fedora-packager fedora-review
+
+Add yourself to the mock group
+  $ usermod -a -G mock 'your user'
+
+Change from the root user to your user name and enter the newgrp command or log in and out for this change to take effect
+ $ newgrp
+
+Run the id command to verify that the mock group appears in your group list
+ $ id

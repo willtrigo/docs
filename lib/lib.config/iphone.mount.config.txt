@@ -1,0 +1,12 @@
+install
+  $ dnf install ifuse libplist libplist-python libimobiledevice-utils libimobiledevice-devel libimobiledevice usbmuxd
+
+create mountpoint
+  $ sudo mkdir /media/iPhone
+  $ sudo chmod 777 /media/iPhone
+
+pair the iphone
+  $ idevicepair pair
+
+mount in the system
+  $ ifuse /media/iPhone

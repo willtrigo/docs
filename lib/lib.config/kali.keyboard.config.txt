@@ -1,0 +1,43 @@
+Configure abnt2 keyboard
+  setxkbmap -model pc105 -layout br -variant abnt2
+
+Settings > Keyboard > Shortcuts > Custom Shortcuts
+
+Atom
+atom
+crtl+alt+a
+
+-----------------------------------------------------------------------------
+Nautilus
+nautilus
+crtl+alt+n
+
+-----------------------------------------------------------------------------
+Terminal
+gnome-terminal
+crtl+alt+t
+
+-----------------------------------------------------------------------------
+Chrome
+google-chrome --incognito
+crtl+alt+g
+
+-----------------------------------------------------------------------------
+volume
+  mute
+  shift+ctrl+alt+m
+
+  up
+  shift+ctrl+alt++
+
+  down
+  shift+ctrl+alt+-
+
+  next
+  shift+ctrl+alt+n
+
+  previous
+  shift+ctrl+alt+b
+
+  play
+  shift+ctrl+alt+p

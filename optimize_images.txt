@@ -1,0 +1,17 @@
+Size images
+  https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+  https://filesquash.io/speedtest
+  https://developers.google.com/speed/pagespeed/insights/
+  https://github.com/ajslater/picopt/
+  https://tinypng.com/developers/reference/python
+
+Amount of loader sources
+  https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
+  eyes in the buckets in server AWS S3
+  cloudfront maybe
+
+Reduce time of the server reply
+  https://docs.djangoproject.com/en/2.1/topics/cache/
+
+Test optimization pages
+  https://www.webpagetest.org/
