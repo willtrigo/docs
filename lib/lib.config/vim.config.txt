@@ -13,8 +13,6 @@ set splitright
 let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_enable=1
-let g:netrw_sort_options="i"
-let g:netrw_sort_sequence=".obj$"
 function! OpenLexplore()
   if bufwinid(get(t:, 'netrw_lexbufnr')) >= 0
     return
