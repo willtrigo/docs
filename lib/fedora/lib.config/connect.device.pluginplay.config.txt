@@ -5,15 +5,15 @@ Verify device
   $ dmesg | grep usb
 
 Create rule
-  $ sudo nano /etc/udev/rules.d/51-device.rules
+  $ sudo vim /etc/udev/rules.d/51-device.rules
     SUBSYSTEM=="usb", ATTR{idVendor}=="idvender.dmesg", ATTR{idProduct}=="idproduct.dmesg", MODE="0666", GROUP="plugdev"
 
 Reset rules
-  $ udevadm control --reload-rules
+  $ sudo udevadm control --reload-rules
 
 Create path
-  $ mkdir -p /media/"device name"
-  $ chmod a+rwx /media/"device name"
+  $ sudo mkdir -p /media/"device name"
+  $ sudo chmod a+rwx /media/"device name"
 
 Config fuse
   $ sudo nano /etc/fuse.conf
