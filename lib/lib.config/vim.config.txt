@@ -1,9 +1,34 @@
-set nu
+set relativenumber
 set listchars=eol:¬,tab:>·,trail:·,extends:>,precedes:<,space:·
+set mouse=a
 set list
 set hlsearch
 hi SpecialKey ctermfg=238
 set showcmd
+set autoindent
+set nocompatible
+set tabstop=4
+set splitright
+
+let g:netrw_liststyle=3
+let g:netrw_keepdir=0
+let g:netrw_banner = 0
+let g:netrw_enable = 1
+function! OpenLexplore()
+  if bufwinid(get(t:, 'netrw_lexbufnr')) >= 0
+    return
+  endif
+
+  Lexplore
+  vertical resize 25
+  wincmd p
+endfunction
+augroup tab_lexplore
+  autocmd!
+  autocmd TabEnter,VimEnter * call OpenLexplore()
+augroup END
+
+" insert remaps "
 inoremap " ""<left>
 inoremap ' ''<left>
 inoremap ( ()<left>
@@ -11,8 +36,13 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+inoremap jk <ESC>
+
+" normal remaps "
 nnoremap K :m .-2<CR>==
 nnoremap J :m .+1<CR>==
+
+" visual remaps "
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
 syntax on
