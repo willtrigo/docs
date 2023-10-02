@@ -10,9 +10,14 @@ set nocompatible
 set tabstop=4
 set splitright
 
-let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_enable=1
+let g:netrw_fastbrowse=0
+let g:netrw_liststyle=3
+augroup SessionFixing
+	autocmd!
+	autocmd SessionLoadPost  * bwipeout "NetrwTreeListing"
+augroup END
 function! OpenLexplore()
   if bufwinid(get(t:, 'netrw_lexbufnr')) >= 0
     return
