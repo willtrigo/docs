@@ -8,6 +8,7 @@ set showcmd
 set autoindent
 set nocompatible
 set tabstop=4
+set cindent
 
 let g:netrw_banner=0
 let g:netrw_enable=1
