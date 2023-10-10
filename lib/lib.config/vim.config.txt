@@ -46,12 +46,12 @@ inoremap { {}<left>
 inoremap jk <ESC>
 
 " normal remaps "
-nnoremap <leader> - k :m .-2<CR>==
-nnoremap <leader> - j :m .+1<CR>==
+nnoremap <F2> :m .-2<CR>==
+nnoremap <F3> :m .+1<CR>==
 
 " visual remaps "
-vnoremap <leader> - k :m '<-2<CR>gv=gv
-vnoremap <leader> - j :m '>+1<CR>gv=gv
+vnoremap <F2> :m '<-2<CR>gv=gv
+vnoremap <F3> :m '>+1<CR>gv=gv
 
 syntax on
 filetype on
