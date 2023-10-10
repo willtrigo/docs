@@ -6,9 +6,12 @@ set hlsearch
 hi SpecialKey ctermfg=238
 set showcmd
 set autoindent
-set nocompatible
-set tabstop=4
 set cindent
+set nocompatible
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 
 let g:netrw_banner=0
 let g:netrw_enable=1
@@ -40,16 +43,14 @@ inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
 inoremap jk <ESC>
 
 " normal remaps "
-nnoremap K :m .-2<CR>==
-nnoremap J :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+nnoremap <M-j> :m .+1<CR>==
 
 " visual remaps "
-vnoremap K :m '<-2<CR>gv=gv
-vnoremap J :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
+vnoremap <M-j> :m '>+1<CR>gv=gv
 syntax on
 filetype on
