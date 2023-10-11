@@ -5,13 +5,14 @@ set list
 set hlsearch
 hi SpecialKey ctermfg=238
 set showcmd
+set nocompatible
+set tabstop=4
+set softtabstop=-1
+set shiftwidth=0
+set shiftround
+set noexpandtab
 set autoindent
 set cindent
-set nocompatible
-set noexpandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
 
 let g:netrw_banner=0
 let g:netrw_enable=1
