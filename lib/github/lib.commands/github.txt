@@ -285,3 +285,8 @@ ADD MULTIPLES REPOSITORIES
 
   Remove old repository path
     $ git remote rm {old repository}
+
+-----------------------------------------------------------------------------
+SET BRANCH PUSH UPSTREAM------------------------------------------------------
+-----------------------------------------------------------------------------
+    $ git config push.default current
