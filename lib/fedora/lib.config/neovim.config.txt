@@ -1,0 +1,133 @@
+init.lua
+  require("config.lazy")
+  vim.opt.termguicolors = true
+  vim.cmd("colorscheme kanagawa-dragon")
+
+config/options.lua
+  vim.opt.expandtab = false -- Use spaces instead of tabs
+  vim.opt.relativenumber = true -- Relative line numbers
+  vim.opt.shiftround = true -- Round indent
+  vim.opt.shiftwidth = 4 -- Size of an indent
+  vim.opt.tabstop = 4 -- Number of spaces tabs count for
+  vim.opt.listchars = { eol = "¬", tab = "> ", trail = "·", extends = ">", precedes = "<", space = " " }
+  vim.opt.list = true
+  vim.opt.wrap = true
+  vim.opt.cindent = true
+  vim.opt.colorcolumn = "80"
+  vim.opt.termguicolors = true
+
+config/lazy.lua
+  local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+  if not vim.loop.fs_stat(lazypath) then
+    -- bootstrap lazy.nvim
+    -- stylua: ignore
+    vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
+  end
+  vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+  
+  require("lazy").setup({
+    spec = {
+      -- add LazyVim and import its plugins
+      { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+      -- import any extras modules here
+      -- { import = "lazyvim.plugins.extras.lang.typescript" },
+      -- { import = "lazyvim.plugins.extras.lang.json" },
+      -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+      -- import/override with your plugins
+      { import = "plugins" },
+    },
+    defaults = {
+      -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
+      -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
+      lazy = false,
+      -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
+      -- have outdated releases, which may break your Neovim install.
+      version = false, -- always use the latest git commit
+      -- version = "*", -- try installing the latest stable version for plugins that support semver
+    },
+    install = { colorscheme = { "tokyonight", "habamax", "nordic" } },
+    checker = { enabled = true }, -- automatically check for plugin updates
+    performance = {
+      rtp = {
+        -- disable some rtp plugins
+        disabled_plugins = {
+          "gzip",
+          -- "matchit",
+          -- "matchparen",
+          -- "netrwPlugin",
+          "tarPlugin",
+          "tohtml",
+          "tutor",
+          "zipPlugin",
+        },
+      },
+    },
+  })
+
+config/keymaps.lua
+  vim.keymap.set("i", "jk", "<ESC>")
+
+plugins/42header.lua
+  return {
+
+    { "Diogo-ss/42-header.nvim" },
+  
+    {
+      "Diogo-ss/42-header.nvim",
+      lazy = false,
+      config = function()
+        local header = require("42header")
+        header.setup({
+          default_map = true, -- default Mapping <F1> in normal mode
+          auto_update = true, -- update header when saving
+          user = "dande-je", -- your user
+          mail = "dande-je@student.42sp.org.br", -- your mail
+        })
+      end,
+    },
+  }
+
+plugins/kanagawa.lua
+  return {
+    "rebelot/kanagawa.nvim",
+    opts = {
+      -- custom options here
+    },
+    config = function(_, opts)
+      require("kanagawa").setup(opts) -- calling setup is optional
+      vim.cmd([[colorscheme kanagawa]])
+    end,
+  }
+
+plugins/neo-tree.lua
+  return {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          show_hidden_count = true,
+          hide_dotfiles = false,
+          hide_gitignored = true,
+          hide_by_name = {
+            -- '.git',
+            -- '.DS_Store',
+            -- 'thumbs.db',
+          },
+          never_show = {},
+        },
+      },
+    },
+  }
+
+plugins/tokyodark.lua
+  return {
+    "tiagovla/tokyodark.nvim",
+    opts = {
+      -- custom options here
+    },
+    config = function(_, opts)
+      require("tokyodark").setup(opts) -- calling setup is optional
+      vim.cmd([[colorscheme tokyodark]])
+    end,
+  }
