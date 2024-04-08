@@ -15,6 +15,7 @@ config/options.lua
   vim.opt.cindent = true
   vim.opt.colorcolumn = "80"
   vim.opt.termguicolors = true
+  vim.g.autoformat = false
 
 config/lazy.lua
   local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -131,3 +132,29 @@ plugins/tokyodark.lua
       vim.cmd([[colorscheme tokyodark]])
     end,
   }
+
+Mason:
+  neocmakelsp
+  detekt
+  trivy
+  clangd
+  cmakelang
+  cmakelint
+  docker-compose-language-service
+  dockerfile-language-server
+  hadolint
+  jdtls
+  kotlin-debug-adapter
+  kotlin-language-server
+  ktlint
+  lua-language-server
+  shfmt
+  stylua
+  yaml-language-server
+
+LazyExtras:
+  lang.clangd
+  lang.cmake
+  lang.docker
+  lang.java
+  lang.yaml
