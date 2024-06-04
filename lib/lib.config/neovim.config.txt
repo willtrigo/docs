@@ -1,3 +1,6 @@
+set nvim in zshrc if nvim was installed from asdf
+  alias nvim='/home/willtrigo/.asdf/installs/neovim/0.10.0/bin/nvim'
+
 init.lua
   require("config.lazy")
   vim.opt.termguicolors = true
