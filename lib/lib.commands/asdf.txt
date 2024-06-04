@@ -1,0 +1,11 @@
+install binary
+  $ asdf install binary latest
+
+uninstall binary
+  $ asdf uninstall binary latest
+
+see all installed binary
+  $ asdf current
+
+set binary 
+  $ asdf global program latest
