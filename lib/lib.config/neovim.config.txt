@@ -2,6 +2,7 @@ init.lua
   require("config.lazy")
   vim.opt.termguicolors = true
   vim.cmd("colorscheme kanagawa-dragon")
+  vim.opt.guifont = "Inconsolate LGC Nerd Font"
 
 config/options.lua
   vim.opt.expandtab = false -- Use spaces instead of tabs
