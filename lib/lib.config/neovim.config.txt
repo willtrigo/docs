@@ -3,6 +3,7 @@ init.lua
   vim.opt.termguicolors = true
   vim.cmd("colorscheme kanagawa-dragon")
   vim.opt.guifont = "Inconsolate LGC Nerd Font"
+  vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
 
 config/options.lua
   vim.opt.expandtab = false -- Use spaces instead of tabs
