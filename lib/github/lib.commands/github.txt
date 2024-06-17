@@ -11,6 +11,9 @@ CONFIG GIT----------------------------------------------------------------------
 	Configura as cores de interação futuras
     	$ git config --global color.ui true
 
+	Configura editor default
+	$ git config --global core.editor "nvim"
+
 	Para iniciar o git na pasta, precisa abrir o terminal e acessar a pasta e
 		$ git init
 
