@@ -3,13 +3,13 @@ CONFIG GIT----------------------------------------------------------------------
 --------------------------------------------------------------------------------
 
 	Configura um nome para o git
-    		$ git config --global user.name "Qualquer nome"
+    	$ git config --global user.name "Qualquer nome"
 
 	Configuta um email para o git
-    		$ git config --global user.email "qualquer email"
+    	$ git config --global user.email "qualquer email"
 
 	Configura as cores de interação futuras
-    		$ git config --global color.ui true
+    	$ git config --global color.ui true
 
 	Configura editor default
 		$ git config --global core.editor "nvim"
