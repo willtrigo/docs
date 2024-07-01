@@ -170,15 +170,17 @@ export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 ZSH_THEME="geoffgarside"
-plugins=(git git-flow)
+plugins=(git git-flow asdf)
 source $ZSH/oh-my-zsh.sh
 
 alias nor='norminette -R CheckForbiddenSourceHeader'
-alias run='cc -Werror -Wextra -Wall -o ~/projects/temp.out'
-alias rungdb='cc -Wall -Werror -Wall -g3 -o ~/projects/temp_gdb.out'
 alias pwdc='pwd | clipcopy'
 export USER='dande-je'
 export MAIL='dande-je@student.42sp.org.br'
+alias lock='eog --fullscreen /nfs/homes/dande-je/workspace/42_utils/images/42/ls.png'
+. /nfs/homes/dande-je/.asdf/asdf.sh
+alias nvim='/nfs//homes/dande-je/.asdf/installs/neovim/0.10.0/bin/nvim'
+
 --------------------------------------------------------------------------
 machine .zshrc
 
