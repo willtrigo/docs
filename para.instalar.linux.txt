@@ -86,6 +86,7 @@ System
 	-Another Window Session Manager(gnome extensions)
 	-Gnome trash(gnome extensions)-talvez saia
 	-Sound Input & Output Device Chooser(gnome extensions)
+        -unite(gnome extensions)
 	-the_silver_searcher(ag better than grep command)
 	-inxi
 	-pavucontrol(flatpak)
