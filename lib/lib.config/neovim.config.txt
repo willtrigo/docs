@@ -96,6 +96,16 @@ plugins/42header.lua
     },
   }
 
+plugins/fzf-lua.lua
+  return {
+    "ibhagwan/fzf-lua",
+    -- optional for icon support
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    -- or if using mini.icons/mini.nvim
+    -- dependencies = { "echasnovski/mini.icons" },
+    opts = {}
+  }
+
 plugins/kanagawa.lua
   return {
     "rebelot/kanagawa.nvim",
@@ -106,6 +116,20 @@ plugins/kanagawa.lua
       require("kanagawa").setup(opts) -- calling setup is optional
       vim.cmd([[colorscheme kanagawa]])
     end,
+  }
+
+plugins/lint.lua
+  local HOME = os.getenv("HOME")
+  return {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    opts = {
+      linters = {
+        ["markdownlint-cli2"] = {
+          args = { "--config", HOME .. "/.markdownlint-cli2.yaml", "--" },
+        },
+      },
+    },
   }
 
 plugins/neo-tree.lua
@@ -127,6 +151,17 @@ plugins/neo-tree.lua
         },
       },
     },
+  }
+
+plugins/todo-comments.lua
+  return {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
   }
 
 plugins/tokyodark.lua
