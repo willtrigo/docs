@@ -10,6 +10,15 @@ init.lua
   vim.cmd("colorscheme kanagawa-dragon")
   vim.opt.guifont = "Inconsolate LGC Nerd Font"
   vim.opt.clipboard = vim.opt.clipboard + "unnamedplus"
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "cpp", "hpp" },
+    callback = function()
+      vim.opt_local.tabstop = 2
+      vim.opt_local.shiftwidth = 2
+      vim.opt_local.softtabstop = 2
+      vim.opt_local.expandtab = true
+    end,
+  })
 
 config/options.lua
   vim.opt.expandtab = false -- Use spaces instead of tabs
