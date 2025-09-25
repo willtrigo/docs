@@ -1,0 +1,31 @@
+base environment
+	minimal install
+
+additional software for selected environment
+	guest agents
+
+for virtualbox
+	$ sudo dnf install -y gcc kernel-devel kernel-headers dkms make bzip2 perl libxcrypt-compat elfutils-libelf-devel
+	$ reboot
+	devices > Insert...
+	$ sudo mkdir -p /media/cdrom
+	$ sudo mount /dev/sr0 /media/cdrom
+	$ sudo sh /media/cdrom/VBoxLinuxAdditions.run
+
+install base for use
+	$ sudo dnf install vim -y
+
+add more speed to download packages
+	& sudo vim /etc/dnf/dnf_conf
+  		+
+    	max_parallel_downloads=10
+
+install hyprland
+	$ sudo dnf copr enable -y solopasha/hyprland
+	$ sudo dnf install hyprland hyprland-devel
+	$ sudo dnf install -y mesa-dri-drivers
+	$ mkdir -p ~/.config/hypr
+	$ cp /usr/share/hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+	$ sudo dnf install -y lightdm
+	$ sudo systemctl enable lightdm
+	$ sudo systemctl start lightdm

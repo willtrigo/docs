@@ -261,3 +261,27 @@ export MAIL='dande-je@student.42sp.org.br'
 export USER='dande-je'
 export clipcopy='xclip -selection clipboard'
 alias pwdc='pwd | clipcopy'
+
+--------------------------------------------------------------------------
+42vm .zshrc
+
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_DISABLE_COMPFIX=true
+COMPLETION_WAITING_DOTS="true"
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
+setopt RM_STAR_WAIT
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+ZSH_THEME="geoffgarside"
+plugins=(git git-flow)
+source $ZSH/oh-my-zsh.sh
+
+export PATH="$HOME/.local/bin:$PATH"
+
+alias nor='norminette -R CheckForbiddenSourceHeader'
+alias pwdc='pwd | clipcopy'
+export USER='dande-je'
+export MAIL='dande-je@student.42sp.org.br'

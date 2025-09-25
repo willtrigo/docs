@@ -1,0 +1,146 @@
+base environment
+	minimal install
+
+additional software for selected environment
+	guest agents
+
+for virtualbox
+	$ sudo dnf install -y htop gcc kernel-devel kernel-headers dkms make bzip2 perl libxcrypt-compat elfutils-libelf-devel
+	$ reboot
+	devices > Insert...
+	$ sudo mkdir -p /media/cdrom
+	$ sudo mount /dev/sr0 /media/cdrom
+	$ sudo sh /media/cdrom/VBoxLinuxAdditions.run
+	$ reboot
+
+install base for use
+	$ sudo dnf install zsh git xinit vim xrandr openbox xorg-x11-server-Xorg terminator wget -y
+	$ echo "openbox-session &" > ~/.xinitrc
+	$ echo "exec terminator" >> ~/.xinitrc
+
+install ohmyzsh
+	$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	$ ssh-keygen -t ed25519
+
+Check available resolutions
+	$ xrandr
+
+set resolutions
+	$ xrandr --output <display> --mode 1920x1080
+		Warning: Replace <display> with the output name from xrandr (e.g., Virtual-1 or VBox_Virtual1).
+
+install nerd fonts
+	$ mkdir -p ~/Downloads
+	$ cd ~/Downloads
+	$ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/InconsolataLGC.zip
+	$ unzip InconsolataLGC.zip -d InconsolataLGC
+	$ mkdir -p ~/.local/share/fonts
+	$ cp InconsolataLGC/*.ttf ~/.local/share/fonts/
+	$ fc-cache -fv
+	$ cd ; rm -rf Downloads/*
+
+autoinit startx
+	$ vim ~/.zprofile
+		+
+		if [[ -z $DISPLAY && $(tty) == /dev/tty1 ]]; then
+    		startx
+		fi
+
+configure terminator
+	$ vim ~/.config/terminator/config
+		+
+		[global_config]
+		  window_state = maximise
+		[keybindings]
+		[profiles]
+		  [[default]]
+		    font = Inconsolata LGC Nerd Font Propo Bold 12
+		    use_system_font = False
+		[layouts]
+		  [[default]]
+		    [[[window0]]]
+		      type = Window
+		      parent = ""
+		    [[[child1]]]
+		      type = Terminal
+		      parent = window0
+		[plugins]
+
+
+configure openbox
+	$ vim ~/.config/openbox/theme.xml
+		+
+		<openbox_config>
+		  <theme>
+		    <font place="MenuTitle">
+		      <name>InconsolataLGC</name>
+		      <size>12</size>
+		      <weight>Normal</weight>
+		      <slant>Normal</slant>
+		    </font>
+		    <font place="MenuItem">
+		      <name>InconsolataLGC</name>
+		      <size>12</size>
+		      <weight>Normal</weight>
+		      <slant>Normal</slant>
+		    </font>
+		  </theme>
+		</openbox_config>
+	$ cp /etc/xdg/openbox/rc.xml ~/.config/openbox/
+	$ vim ~/.config/openbox/rc.xml
+		+
+		<keyboard>
+		  <!-- Existing keybindings -->
+		  <keybind key="C-A-T">
+		    <action name="Execute">
+		      <command>terminator</command>
+		    </action>
+		  </keybind>
+		</keyboard>
+	$ openbox --reconfigure
+
+add more speed to download packages
+	& sudo vim /etc/dnf/dnf_conf
+  		+
+    	max_parallel_downloads=10
+
+$ sudo dnf install python3-pip -y
+$ pip3 install norminette --user
+$ git config --global user.name "dande-je"
+$ git config --global user.email "dande-je@student.42sp.org.br"
+
+$ sudo dnf copr enable dejan/lazygit -y
+$ sudo dnf install neovim fzf ripgrep fd-find python3-setuptools lazygit tree clang-tidy -y
+
+$ git clone git@github.com:willtrigo/nvim.config.git ~/.config/nvim
+$ pip3 install pynvim --user
+$ pip3 install c-formatter-42 --user
+$ sudo npm install -g @ast-grep/cli
+$ sudo npm install -g neovim
+
+
+config neovim
+$ pip install compiledb-plus --user
+$ sudo dnf install clang-tools-extra
+$ sudo npm install -g pyright
+$ sudo dnf install luarocks
+$ sudo luarocks install luacheck
+$ sudo dnf install ruff
+$ sudo dnf install ImageMagick
+$ sudo dnf install ghostscript
+$ sudo dnf install rust cargo
+$ sudo dnf install texlive-scheme-basic
+$ sudo npm install -g @mermaid-js/mermaid-cli
+$ sudo dnf install sqlite sqlite-devel
+$ sudo luarocks install lsqlite3
+$ sudo dnf install kitty
+$ cargo install ast-grep
+
+$ curl -L -o megacmd-Fedora_42.x86_64.rpm https://mega.nz/linux/repo/Fedora_42/x86_64/megacmd-Fedora_42.x86_64.rpm
+$ sudo dnf install "$PWD/megacmd-Fedora_42.x86_64.rpm"
+
+$ sudo dnf install pcmanfm -y
+
+to finish
+	$ sudo dnf autoremove -y
+	$ sudo dnf clean all

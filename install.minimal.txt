@@ -1,4 +1,30 @@
 base environment
+	minimal install
+
+install vim tootbox 
+install rpm
+install gnome-shell file-roller terminator gnome-system-monitor libavcodec-freeworld nautilus xdg-user-dirs xdg-user-dirs-gtk network-manager-applet flatpak firefox gnome-calculator evince @development-tools htop util-linux-user zsh gnome-font-viewer gnome-tweaks @core @hardware-support xorg-x11-drv-amdgpu inxi most detox set troubleshoot
+add flatpak path
+graphical.target
+default zsh
+ohmyzsh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+base environment
   minimal install
 
 additional software for selected environment
@@ -87,7 +113,7 @@ $ sudo dnf install @base-x gnome-shell gnome-terminal nautilus firefox
 $ sudo systemctl set-default graphical.target
 $ reboot
 
-$ sudo dnf install chrome-gnome-shell gnome-tweaks @development-tools
+$ sudo dnf install chrome-gnome-shell gnome-tweaks @development-tools htop
 
 $ sudo dnf install vlc
 
