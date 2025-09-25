@@ -1,0 +1,45 @@
+Checks: 'bugprone-*,clang-analyzer-*,readability-*,iwyu-*,-modernize-*,-cppcoreguidelines-*'
+HeaderFilterRegex: '.*'
+ExtraArgs: [
+  '-std=c++98',
+  '-I/home/willtrigo/workspace/{project}'
+]
+CheckOptions:
+  - key: readability-identifier-naming.VariableCase
+    value: camelCase
+  - key: readability-identifier-naming.VariablePrefix
+    value: ''
+  - key: readability-identifier-naming.FunctionCase
+    value: camelCase
+  - key: readability-identifier-naming.FunctionPrefix
+    value: ''
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.ClassPrefix
+    value: ''
+  - key: readability-identifier-naming.PrivateMemberPrefix
+    value: m_
+  - key: readability-identifier-naming.ProtectedMemberPrefix
+    value: m_
+  - key: readability-identifier-naming.ConstexprVariableCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.ConstexprVariablePrefix
+    value: ''
+  - key: readability-identifier-naming.GlobalConstantCase
+    value: UPPER_CASE
+  - key: readability-identifier-naming.GlobalConstantPrefix
+    value: ''
+  - key: readability-braces-around-statements.ShortStatementLines
+    value: 1
+  - key: readability-function-size.LineThreshold
+    value: 40
+  - key: readability-function-size.BranchThreshold
+    value: 10
+  - key: readability-function-size.ParameterThreshold
+    value: 4
+  - key: readability-else-after-return.IgnoreReturnType
+    value: 'void,int'
+  - key: bugprone-too-small-loop-variable.MagnitudeBitsUpperLimit
+    value: 16
+  - key: iwyu.MappingFilePath
+    value: ''

@@ -136,6 +136,8 @@ $ sudo luarocks install lsqlite3
 $ sudo dnf install kitty
 $ cargo install ast-grep
 
+$ git config --global core.editor "nvim"
+
 $ curl -L -o megacmd-Fedora_42.x86_64.rpm https://mega.nz/linux/repo/Fedora_42/x86_64/megacmd-Fedora_42.x86_64.rpm
 $ sudo dnf install "$PWD/megacmd-Fedora_42.x86_64.rpm"
 

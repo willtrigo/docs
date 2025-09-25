@@ -280,6 +280,7 @@ plugins=(git git-flow)
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 alias nor='norminette -R CheckForbiddenSourceHeader'
 alias pwdc='pwd | clipcopy'
