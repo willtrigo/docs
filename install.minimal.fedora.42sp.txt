@@ -110,7 +110,7 @@ $ git config --global user.name "dande-je"
 $ git config --global user.email "dande-je@student.42sp.org.br"
 
 $ sudo dnf copr enable dejan/lazygit -y
-$ sudo dnf install neovim fzf ripgrep fd-find python3-setuptools lazygit tree clang-tidy -y
+$ sudo dnf install neovim fzf ripgrep fd-find python3-setuptools lazygit tree clang-tidy clang-format -y
 
 $ git clone git@github.com:willtrigo/nvim.config.git ~/.config/nvim
 $ pip3 install pynvim --user
@@ -129,17 +129,31 @@ $ sudo dnf install ruff
 $ sudo dnf install ImageMagick
 $ sudo dnf install ghostscript
 $ sudo dnf install rust cargo
+
+for install about fzf-lua(works without this)
+  $ cargo install viu
+  $ sudo dnf install chafa
+  $ sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/home:justkidding/Fedora_42/home:justkidding.repo
+  $ sudo dnf install ueberzugpp
+
 $ sudo dnf install texlive-scheme-basic
 $ sudo npm install -g @mermaid-js/mermaid-cli
 $ sudo dnf install sqlite sqlite-devel
 $ sudo luarocks install lsqlite3
 $ sudo dnf install kitty
 $ cargo install ast-grep
+$ sudo dnf install compat-lua compat-lua-devel
+
+$ sudo dnf install -y gcc gcc-c++ make cmake ninja-build git
+$ sudo dnf install -y libtermkey-devel libvterm-devel libuv-devel lua-devel luajit-devel luarocks msgpack-devel
+$ sudo rm -rf /usr/lib64/nvim/parser.bak
 
 $ git config --global core.editor "nvim"
 
+# do this in cd ~/Downloads/
 $ curl -L -o megacmd-Fedora_42.x86_64.rpm https://mega.nz/linux/repo/Fedora_42/x86_64/megacmd-Fedora_42.x86_64.rpm
 $ sudo dnf install "$PWD/megacmd-Fedora_42.x86_64.rpm"
+$ rm -rf megacmd-Fedora_42.x86_64.rpm
 
 $ sudo dnf install pcmanfm -y
 
