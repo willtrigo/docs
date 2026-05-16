@@ -1,0 +1,6 @@
+#remove ugly blue title bar from gnome with wayland
+
+flatpak override com.spotify.Client --user --socket=x11 --nosocket=wayland --unset-env=WAYLAND_DISPLAY
+
+mkdir -p ~/.var/app/com.spotify.Client/config
+echo "--ozone-platform=x11" > ~/.var/app/com.spotify.Client/config/spotify-flags.conf
