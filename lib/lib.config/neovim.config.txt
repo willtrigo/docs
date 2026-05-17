@@ -195,12 +195,10 @@ plugins/tokyodark.lua
   }
 
 Mason:
-  neocmakelsp
-  detekt
-  trivy
   clangd
   cmakelang
   cmakelint
+  detekt
   docker-compose-language-service
   dockerfile-language-server
   hadolint
@@ -209,8 +207,10 @@ Mason:
   kotlin-language-server
   ktlint
   lua-language-server
+  neocmakelsp
   shfmt
   stylua
+  trivy
   yaml-language-server
 
 LazyExtras:
